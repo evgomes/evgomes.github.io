@@ -33,3 +33,16 @@ html {
 .resume-section {
     margin: 0 auto;
 }
+
+/* Skills List */
+.skills-list li {
+    z-index: 2;
+    cursor: pointer;
+    transition: .1s ease-in;
+}
+
+    .skills-list li:hover,
+    .skills-list li.active {
+        transform: scale(1.1);
+        background-color: #bd5d38;
+    }
