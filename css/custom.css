@@ -1,3 +1,7 @@
+html {
+    font-size: 17px;
+}
+
 /* Overrides default background color */
 .bg-primary {
     background-color: #4682B4 !important;
