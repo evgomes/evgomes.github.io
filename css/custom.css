@@ -199,3 +199,73 @@ html {
     border-right: 3px solid #9518c7;
     border-top: 3px solid #9518c7;
 }
+
+/* Projects */
+
+.card-project {
+    transition: .3s all;
+    position: relative;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border: 1px solid rgba(0, 0, 0, .125);
+    border-radius: 0;
+    cursor: pointer;
+}
+
+
+.card-project:hover {
+    box-shadow: 0 4px 4px 0 rgba(70, 130, 180, 0.2), 0 6px 20px 0 rgba(70, 130, 180, 0.19);
+}
+
+.card-project .card-title {
+    font-size: 1.5rem;
+    padding-top: .5rem;
+    padding-left: .8rem;
+    padding-right: .8rem;
+}
+
+.card-project .card-period {
+    padding-left: .8rem;
+    padding-right: .8rem;
+}
+
+.card-project .card-text {
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+.card-project .card-img {
+    border-bottom: 1px solid rgba(0, 0, 0, .125);
+    border-radius: 0;
+    object-fit: cover;
+    object-position: top;
+    height: 200px;
+}
+
+@media screen and (min-width: 575px) {
+    .modal-project {
+        max-width: 850px;
+    }
+}
+
+/* Carousel Items Backdrop */
+.carousel-item.active::before, .carousel-item-next::before, .carousel-item-prev::before {
+	position: absolute;
+	z-index: 1;
+	content: "";
+	bottom: 0;
+	width: 100%;
+	height: 100%;
+	background: linear-gradient(0deg,rgba(0,0,0,.6),rgba(0,0,0,.2) 20%,rgba(0,0,0,.2) 0%,transparent);
+}
+
+.carousel-control-prev-icon, .carousel-control-next-icon {
+    width: 4rem;
+    height: 4rem;
+}

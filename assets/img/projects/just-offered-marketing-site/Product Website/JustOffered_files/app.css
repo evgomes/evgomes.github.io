@@ -1,0 +1,46 @@
+﻿.mt-150 {
+	margin-top: 150px;
+}
+
+/* Toast Notification */
+.toast-success {
+	background: #d1e7dd !important;
+}
+
+	.toast-success,
+	.toast-success .toast-close {
+		color: #0f5132 !important;
+	}
+
+.toast-error {
+	background: #f8d7da !important;
+}
+
+	.toast-error,
+	.toast-error .toast-close {
+		color: #842029 !important;
+	}
+
+/* Password Requirements */
+.password-requirements-container p {
+	font-size: 16px;
+	font-weight: 400;
+	margin-bottom: 1em;
+}
+
+.password-requirements li {
+	margin-left: 1.6em;
+}
+
+	.password-requirements li:not(.text-success)::marker {
+		content: "• ";
+	}
+
+	.password-requirements li.text-success::marker {
+		content: "✓";
+	}
+
+.our-agents,
+.testimonials {
+	padding-bottom: 0;
+}

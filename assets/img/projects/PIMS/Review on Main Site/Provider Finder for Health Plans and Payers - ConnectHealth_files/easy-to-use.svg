@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="90" height="90" viewBox="0 0 90 90">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="Rectangle_32" data-name="Rectangle 32" width="90" height="90" transform="translate(1431 941)" fill="#fc9898" opacity="0.73"/>
+    </clipPath>
+  </defs>
+  <g id="easy-to-use" transform="translate(-1431 -941)" clip-path="url(#clip-path)">
+    <g id="easy-to-use-2" data-name="easy-to-use" transform="translate(675 500.587)">
+      <path id="Subtraction_15" data-name="Subtraction 15" d="M-7080.279-5792.608H-7111.5v-30.653l11-24.736a8.316,8.316,0,0,1,8.309,8.309v11.077h15.74a5.531,5.531,0,0,1,4.179,1.906,5.53,5.53,0,0,1,1.3,4.464l-3.822,24.924a5.548,5.548,0,0,1-1.866,3.371,5.542,5.542,0,0,1-3.61,1.337Z" transform="translate(7901.67 6304.41)" fill="none" stroke="#6a4a98" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
+      <g id="Rectangle_147" data-name="Rectangle 147" transform="translate(772 481.114)" fill="none" stroke="#ff7b49" stroke-width="3">
+        <rect width="14.536" height="32.303" rx="4" stroke="none"/>
+        <rect x="1.5" y="1.5" width="11.536" height="29.303" rx="2.5" fill="none"/>
+      </g>
+    </g>
+  </g>
+</svg>

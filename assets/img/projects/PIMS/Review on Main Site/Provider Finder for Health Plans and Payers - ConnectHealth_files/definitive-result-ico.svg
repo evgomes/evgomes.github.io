@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="75" height="75" viewBox="0 0 75 75">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="Rectangle_19" data-name="Rectangle 19" width="75" height="75" transform="translate(1031 344)" fill="#fff" stroke="#707070" stroke-width="1"/>
+    </clipPath>
+  </defs>
+  <g id="definitive-result-ico" transform="translate(-1031 -344)" clip-path="url(#clip-path)">
+    <g id="Group_22" data-name="Group 22" transform="translate(1032.462 353.699)">
+      <path id="Union_7" data-name="Union 7" d="M0,33.4A11.731,11.731,0,0,1,11.9,21.839,12.32,12.32,0,0,1,14,22.019V3a3,3,0,0,1,3-3H62.958a3,3,0,0,1,3,3V37.409a3,3,0,0,1-3,3h-41.6A12,12,0,0,1,11.9,44.953,11.731,11.731,0,0,1,0,33.4Z" transform="translate(7.053 4.875)" fill="#fff1ec"/>
+      <g id="Group_19" data-name="Group 19" transform="translate(0 26.369)">
+        <g id="search" transform="translate(0 0)">
+          <circle id="Ellipse_10" data-name="Ellipse 10" cx="12.917" cy="12.917" r="12.917" transform="translate(3.399)" fill="none" stroke="#6a4a98" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
+          <line id="Line_14" data-name="Line 14" y1="6.799" x2="6.799" transform="translate(0 22.435)" fill="none" stroke="#6a4a98" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
+        </g>
+        <path id="Subtraction_1" data-name="Subtraction 1" d="M11.909,19.027A10.212,10.212,0,0,0,15.3,15.361a10.591,10.591,0,0,0,1.286-5.071A10.418,10.418,0,0,0,13.678,3.01,9.675,9.675,0,0,0,0,2.65,9.647,9.647,0,0,1,5.247,1.1a10.127,10.127,0,0,1,9.928,10.293,10.49,10.49,0,0,1-3.267,7.633Z" transform="translate(8.858 3.647)" fill="#ff7b49"/>
+      </g>
+      <path id="Path_47" data-name="Path 47" d="M3,25.575V7.556A3.564,3.564,0,0,1,6.572,4H53.007a3.564,3.564,0,0,1,3.572,3.556V41.4a3.564,3.564,0,0,1-3.572,3.556H22.431" transform="translate(11.928 -4)" fill="none" stroke="#6a4a98" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
+      <g id="Group_20" data-name="Group 20" transform="translate(33.978 12.122)">
+        <path id="Path_43" data-name="Path 43" d="M9,24.163V8" transform="translate(7.163 -8)" fill="none" stroke="#ff7b49" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
+        <path id="Path_45" data-name="Path 45" d="M15,19.621V10" transform="translate(-6.918 -3.458)" fill="none" stroke="#ff7b49" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
+        <path id="Path_46" data-name="Path 46" d="M12,15.811V11" transform="translate(-12 0.353)" fill="none" stroke="#ff7b49" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
+      </g>
+      <g id="Group_21" data-name="Group 21" transform="translate(30.514 40.955)">
+        <path id="Path_48" data-name="Path 48" d="M7,20H30.09" transform="translate(-7 -7.926)" fill="none" stroke="#6a4a98" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
+        <path id="Path_49" data-name="Path 49" d="M9,16V28.044" transform="translate(-4.382 -15.97)" fill="none" stroke="#6a4a98" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
+        <path id="Path_50" data-name="Path 50" d="M15,16V28.044" transform="translate(3.307 -16)" fill="none" stroke="#6a4a98" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
+      </g>
+    </g>
+  </g>
+</svg>
