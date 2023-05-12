@@ -200,8 +200,24 @@ html {
     border-top: 3px solid #9518c7;
 }
 
-/* Projects */
+/* Ribbon - Open source */
+.ribbon.ribbon-open-source span {
+    background: #34678f;
+    background: linear-gradient(#34678f 0%, #34678f 100%);
+}
 
+.ribbon.ribbon-open-source span::before {
+    z-index: -1;
+    border-left: 3px solid #34678f;
+    border-top: 3px solid #34678f;
+}
+
+.ribbon.ribbon-open-source span::after {
+    border-right: 3px solid #34678f;
+    border-top: 3px solid #34678f;
+}
+
+/* Projects */
 .card-project {
     transition: .3s all;
     position: relative;
@@ -228,6 +244,7 @@ html {
     padding-top: .5rem;
     padding-left: .8rem;
     padding-right: .8rem;
+    text-transform: none;
 }
 
 .card-project .card-period {
