@@ -257,7 +257,7 @@ html {
 /* Carousel */
 .modal-project .carousel-inner {
     width: 100%;
-    max-height: 450px;
+    max-height: 400px;
 }
 
 .carousel-item.active::before, .carousel-item-next::before, .carousel-item-prev::before {
