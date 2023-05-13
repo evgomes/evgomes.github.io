@@ -1,22 +1,22 @@
 html {
-    font-size: 17px;
+  font-size: 17px;
 }
 
 /* Overrides default background color */
 .bg-primary {
-    background-color: #4682B4 !important;
+  background-color: #4682b4 !important;
 }
 
 /* Sidebar Customization */
-@media(min-width: 992px) {
-    #sideNav:before {
-        content: "";
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        background-image: url("../assets/img/background.jpg");
-        opacity: 0.1;
-    }
+@media (min-width: 992px) {
+  #sideNav:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: url("../assets/img/background.jpg");
+    opacity: 0.1;
+  }
 }
 
 /* Sidebar and Navbar Z-index customization */
@@ -26,268 +26,285 @@ html {
 .navbar-toggler,
 #sideNav ul,
 #sideNav ul li {
-    z-index: 1050;
+  z-index: 1050;
 }
 
 /* Sections Margin */
 .resume-section {
-    margin: 0 auto;
+  margin: 0 auto;
 }
 
 /* Skills List */
 .skills-list li {
-    z-index: 2;
-    cursor: pointer;
-    transition: .1s ease-in;
+  z-index: 2;
+  cursor: pointer;
+  transition: 0.1s ease-in;
 }
 
 .skills-list li:hover,
 .skills-list li.active {
-    transform: scale(1.1);
-    background-color: #bd5d38;
+  transform: scale(1.1);
+  background-color: #bd5d38;
 }
 
 /* Courses and Certificates */
 .card-course .card-title {
-    text-transform: none;
+  text-transform: none;
 }
 
 .ribbon {
-    position: absolute;
-    right: -5px;
-    top: -5px;
-    z-index: 1;
-    overflow: hidden;
-    width: 75px;
-    height: 75px;
-    text-align: right;
+  position: absolute;
+  right: -5px;
+  top: -5px;
+  z-index: 1;
+  overflow: hidden;
+  width: 75px;
+  height: 75px;
+  text-align: right;
 }
 
 .ribbon span {
-    font-size: 10px;
-    font-weight: bold;
-    color: #FFF;
-    text-transform: uppercase;
-    text-align: center;
-    line-height: 20px;
-    transform: rotate(45deg);
-    -webkit-transform: rotate(45deg);
-    width: 100px;
-    display: block;
-    position: absolute;
-    top: 19px;
-    right: -21px;
+  font-size: 10px;
+  font-weight: bold;
+  color: #fff;
+  text-transform: uppercase;
+  text-align: center;
+  line-height: 20px;
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  width: 100px;
+  display: block;
+  position: absolute;
+  top: 19px;
+  right: -21px;
 }
 
 .ribbon span::before {
-    content: "";
-    position: absolute;
-    left: 0px;
-    top: 100%;
-    z-index: -1;
-    border-right: 3px solid transparent;
-    border-bottom: 3px solid transparent;
+  content: "";
+  position: absolute;
+  left: 0px;
+  top: 100%;
+  z-index: -1;
+  border-right: 3px solid transparent;
+  border-bottom: 3px solid transparent;
 }
 
 .ribbon span::after {
-    content: "";
-    position: absolute;
-    right: 0px;
-    top: 100%;
-    z-index: -1;
-    border-left: 3px solid transparent;
-    border-bottom: 3px solid transparent;
+  content: "";
+  position: absolute;
+  right: 0px;
+  top: 100%;
+  z-index: -1;
+  border-left: 3px solid transparent;
+  border-bottom: 3px solid transparent;
 }
 
 .ribbon span {
-    background: #79A70A;
-    background: linear-gradient(#9BC90D 0%, #9BC90D 100%);
+  background: #79a70a;
+  background: linear-gradient(#9bc90d 0%, #9bc90d 100%);
 }
 
 .ribbon span::before {
-    z-index: -1;
-    border-left: 3px solid #9BC90D;
-    border-top: 3px solid #9BC90D;
+  z-index: -1;
+  border-left: 3px solid #9bc90d;
+  border-top: 3px solid #9bc90d;
 }
 
 .ribbon span::after {
-    border-right: 3px solid #9BC90D;
-    border-top: 3px solid #9BC90D;
+  border-right: 3px solid #9bc90d;
+  border-top: 3px solid #9bc90d;
 }
 
 /* Ribbon - DevOps */
 .ribbon.ribbon-devops span {
-    background: #066eff;
-    background: linear-gradient(#066eff 0%, #066eff 100%);
+  background: #066eff;
+  background: linear-gradient(#066eff 0%, #066eff 100%);
 }
 
 .ribbon.ribbon-devops span::before {
-    z-index: -1;
-    border-left: 3px solid #066eff;
-    border-top: 3px solid #066eff;
+  z-index: -1;
+  border-left: 3px solid #066eff;
+  border-top: 3px solid #066eff;
 }
 
 .ribbon.ribbon-devops span::after {
-    border-right: 3px solid #066eff;
-    border-top: 3px solid #066eff;
+  border-right: 3px solid #066eff;
+  border-top: 3px solid #066eff;
 }
 
 /* Ribbon - Database */
 .ribbon.ribbon-database span {
-    background: #bd5d38;
-    background: linear-gradient(#bd5d38 0%, #bd5d38 100%);
+  background: #bd5d38;
+  background: linear-gradient(#bd5d38 0%, #bd5d38 100%);
 }
 
 .ribbon.ribbon-database span::before {
-    z-index: -1;
-    border-left: 3px solid #bd5d38;
-    border-top: 3px solid #bd5d38;
+  z-index: -1;
+  border-left: 3px solid #bd5d38;
+  border-top: 3px solid #bd5d38;
 }
 
 .ribbon.ribbon-database span::after {
-    border-right: 3px solid #bd5d38;
-    border-top: 3px solid #bd5d38;
+  border-right: 3px solid #bd5d38;
+  border-top: 3px solid #bd5d38;
 }
 
 /* Ribbon - Concepts */
 .ribbon.ribbon-concepts span {
-    background: #118a49;
-    background: linear-gradient(#118a49 0%, #118a49 100%);
+  background: #118a49;
+  background: linear-gradient(#118a49 0%, #118a49 100%);
 }
 
 .ribbon.ribbon-concepts span::before {
-    z-index: -1;
-    border-left: 3px solid #118a49;
-    border-top: 3px solid #118a49;
+  z-index: -1;
+  border-left: 3px solid #118a49;
+  border-top: 3px solid #118a49;
 }
 
 .ribbon.ribbon-concepts span::after {
-    border-right: 3px solid #118a49;
-    border-top: 3px solid #118a49;
+  border-right: 3px solid #118a49;
+  border-top: 3px solid #118a49;
 }
 
 /* Ribbon - Back-end */
 .ribbon.ribbon-backend span {
-    background: #110f12;
-    background: linear-gradient(#110f12 0%, #110f12 100%);
+  background: #110f12;
+  background: linear-gradient(#110f12 0%, #110f12 100%);
 }
 
 .ribbon.ribbon-backend span::before {
-    z-index: -1;
-    border-left: 3px solid #110f12;
-    border-top: 3px solid #110f12;
+  z-index: -1;
+  border-left: 3px solid #110f12;
+  border-top: 3px solid #110f12;
 }
 
 .ribbon.ribbon-backend span::after {
-    border-right: 3px solid #110f12;
-    border-top: 3px solid #110f12;
+  border-right: 3px solid #110f12;
+  border-top: 3px solid #110f12;
 }
 
 /* Ribbon - Front-end */
 .ribbon.ribbon-frontend span {
-    background: #a45eb8;
-    background: linear-gradient(#a45eb8 0%, #a45eb8 100%);
+  background: #a45eb8;
+  background: linear-gradient(#a45eb8 0%, #a45eb8 100%);
 }
 
 .ribbon.ribbon-frontend span::before {
-    z-index: -1;
-    border-left: 3px solid #a45eb8;
-    border-top: 3px solid #a45eb8;
+  z-index: -1;
+  border-left: 3px solid #a45eb8;
+  border-top: 3px solid #a45eb8;
 }
 
 .ribbon.ribbon-frontend span::after {
-    border-right: 3px solid #9518c7;
-    border-top: 3px solid #9518c7;
+  border-right: 3px solid #9518c7;
+  border-top: 3px solid #9518c7;
 }
 
 /* Ribbon - Open source */
 .ribbon.ribbon-open-source span {
-    background: #34678f;
-    background: linear-gradient(#34678f 0%, #34678f 100%);
+  background: #34678f;
+  background: linear-gradient(#34678f 0%, #34678f 100%);
 }
 
 .ribbon.ribbon-open-source span::before {
-    z-index: -1;
-    border-left: 3px solid #34678f;
-    border-top: 3px solid #34678f;
+  z-index: -1;
+  border-left: 3px solid #34678f;
+  border-top: 3px solid #34678f;
 }
 
 .ribbon.ribbon-open-source span::after {
-    border-right: 3px solid #34678f;
-    border-top: 3px solid #34678f;
+  border-right: 3px solid #34678f;
+  border-top: 3px solid #34678f;
 }
 
 /* Projects */
 .card-project {
-    transition: .3s all;
-    position: relative;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    min-width: 0;
-    word-wrap: break-word;
-    background-color: #fff;
-    background-clip: border-box;
-    border: 1px solid rgba(0, 0, 0, .125);
-    border-radius: 0;
-    cursor: pointer;
+  transition: 0.3s all;
+  position: relative;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  min-width: 0;
+  word-wrap: break-word;
+  background-color: #fff;
+  background-clip: border-box;
+  border: 1px solid rgba(0, 0, 0, 0.125);
+  border-radius: 0;
+  cursor: pointer;
 }
 
-
 .card-project:hover {
-    box-shadow: 0 4px 4px 0 rgba(70, 130, 180, 0.2), 0 6px 20px 0 rgba(70, 130, 180, 0.19);
+  box-shadow: 0 4px 4px 0 rgba(70, 130, 180, 0.2), 0 6px 20px 0 rgba(70, 130, 180, 0.19);
 }
 
 .card-project .card-title {
-    font-size: 1.5rem;
-    padding-top: .5rem;
-    padding-left: .8rem;
-    padding-right: .8rem;
-    text-transform: none;
+  font-size: 1.5rem;
+  padding-top: 0.5rem;
+  padding-left: 0.8rem;
+  padding-right: 0.8rem;
+  text-transform: none;
 }
 
 .card-project .card-period {
-    padding-left: .8rem;
-    padding-right: .8rem;
+  padding-left: 0.8rem;
+  padding-right: 0.8rem;
 }
 
 .card-project .card-text {
-    padding-left: 1rem;
-    padding-right: 1rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 
 .card-project .card-img {
-    border-bottom: 1px solid rgba(0, 0, 0, .125);
-    border-radius: 0;
-    object-fit: cover;
-    object-position: top;
-    height: 200px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.125);
+  border-radius: 0;
+  object-fit: cover;
+  object-position: top;
+  height: 200px;
 }
 
 @media screen and (min-width: 575px) {
-    .modal-project {
-        max-width: 850px;
-    }
+  .modal-project {
+    max-width: 850px;
+  }
 }
 
 /* Carousel */
 .modal-project .carousel-inner {
-    width: 100%;
-    max-height: 400px;
+  width: 100%;
+  max-height: 400px;
 }
 
-.carousel-item.active::before, .carousel-item-next::before, .carousel-item-prev::before {
-	position: absolute;
-	z-index: 1;
-	content: "";
-	bottom: 0;
-	width: 100%;
-	height: 100%;
-	background: linear-gradient(0deg,rgba(0,0,0,.6),rgba(0,0,0,.2) 20%,rgba(0,0,0,.2) 0%,transparent);
+.carousel-item.active::before,
+.carousel-item-next::before,
+.carousel-item-prev::before {
+  position: absolute;
+  z-index: 1;
+  content: "";
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.2) 20%, rgba(0, 0, 0, 0.2) 0%, transparent);
 }
 
-.carousel-control-prev-icon, .carousel-control-next-icon {
-    width: 4rem;
-    height: 4rem;
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  width: 4rem;
+  height: 4rem;
 }
+
+/* Blog Posts */
+.card-post .img-post {
+    height: 300px !important;
+}
+
+.blog-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.blog-link:hover, .blog-link:visited {
+    text-decoration: none;
+    color: inherit;
+  }
