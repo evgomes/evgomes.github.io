@@ -2,9 +2,13 @@ html {
   font-size: 17px;
 }
 
+body {
+  background-color: #f4f7f6;
+}
+
 /* Overrides default background color */
 .bg-primary {
-  background-color: #4682b4 !important;
+  background-color: #030637 !important;
 }
 
 /* Sidebar Customization */
@@ -44,7 +48,7 @@ html {
 .skills-list li:hover,
 .skills-list li.active {
   transform: scale(1.1);
-  background-color: #bd5d38;
+  background-color: #CD5C08;
 }
 
 /* Courses and Certificates */
@@ -134,19 +138,19 @@ html {
 
 /* Ribbon - Database */
 .ribbon.ribbon-database span {
-  background: #bd5d38;
-  background: linear-gradient(#bd5d38 0%, #bd5d38 100%);
+  background: #CD5C08;
+  background: linear-gradient(#CD5C08 0%, #CD5C08 100%);
 }
 
 .ribbon.ribbon-database span::before {
   z-index: -1;
-  border-left: 3px solid #bd5d38;
-  border-top: 3px solid #bd5d38;
+  border-left: 3px solid #CD5C08;
+  border-top: 3px solid #CD5C08;
 }
 
 .ribbon.ribbon-database span::after {
-  border-right: 3px solid #bd5d38;
-  border-top: 3px solid #bd5d38;
+  border-right: 3px solid #CD5C08;
+  border-top: 3px solid #CD5C08;
 }
 
 /* Ribbon - Concepts */
@@ -296,7 +300,7 @@ html {
 
 /* Blog Posts */
 .card-post .img-post {
-    height: 300px !important;
+  height: 300px !important;
 }
 
 .blog-link {
@@ -304,7 +308,35 @@ html {
   color: inherit;
 }
 
-.blog-link:hover, .blog-link:visited {
-    text-decoration: none;
-    color: inherit;
-  }
+.blog-link:hover,
+.blog-link:visited {
+  text-decoration: none;
+  color: inherit;
+}
+
+.btn-contact-me {
+  font-size: 18px;
+  color: #fff;
+  background-color: #CD5C08;
+  padding: 10px 30px;
+  border: 2px solid #CD5C08;
+  box-shadow: rgb(0, 0, 0) 0px 0px 0px 0px;
+  border-radius: 50px;
+  transition: 200ms;
+  transform: translateY(0);
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  align-items: center;
+  cursor: pointer;
+
+}
+
+.btn-contact-me:hover {
+  transition: 200ms;
+  transform: translateY(-0px);
+  background-color: #fff;
+  color: #030637;
+  border: solid 2px #030637;
+
+}
