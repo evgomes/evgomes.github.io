@@ -48,7 +48,7 @@ body {
 .skills-list li:hover,
 .skills-list li.active {
   transform: scale(1.1);
-  background-color: #CD5C08;
+  background-color: #cd5c08;
 }
 
 /* Courses and Certificates */
@@ -138,19 +138,19 @@ body {
 
 /* Ribbon - Database */
 .ribbon.ribbon-database span {
-  background: #CD5C08;
-  background: linear-gradient(#CD5C08 0%, #CD5C08 100%);
+  background: #cd5c08;
+  background: linear-gradient(#cd5c08 0%, #cd5c08 100%);
 }
 
 .ribbon.ribbon-database span::before {
   z-index: -1;
-  border-left: 3px solid #CD5C08;
-  border-top: 3px solid #CD5C08;
+  border-left: 3px solid #cd5c08;
+  border-top: 3px solid #cd5c08;
 }
 
 .ribbon.ribbon-database span::after {
-  border-right: 3px solid #CD5C08;
-  border-top: 3px solid #CD5C08;
+  border-right: 3px solid #cd5c08;
+  border-top: 3px solid #cd5c08;
 }
 
 /* Ribbon - Concepts */
@@ -219,6 +219,23 @@ body {
 .ribbon.ribbon-open-source span::after {
   border-right: 3px solid #34678f;
   border-top: 3px solid #34678f;
+}
+
+/* Ribbon - Business */
+.ribbon.ribbon-business span {
+  background: #a13d99;
+  background: linear-gradient(#a13d99 0%, #874e82 100%);
+}
+
+.ribbon.ribbon-business span::before {
+  z-index: -1;
+  border-left: 3px solid #a13d99;
+  border-top: 3px solid #a13d99;
+}
+
+.ribbon.ribbon-business span::after {
+  border-right: 3px solid #a13d99;
+  border-top: 3px solid #a13d99;
 }
 
 /* Projects */
@@ -317,9 +334,9 @@ body {
 .btn-contact-me {
   font-size: 18px;
   color: #fff;
-  background-color: #CD5C08;
+  background-color: #cd5c08;
   padding: 10px 30px;
-  border: 2px solid #CD5C08;
+  border: 2px solid #cd5c08;
   box-shadow: rgb(0, 0, 0) 0px 0px 0px 0px;
   border-radius: 50px;
   transition: 200ms;
@@ -329,7 +346,6 @@ body {
   flex-direction: row;
   align-items: center;
   cursor: pointer;
-
 }
 
 .btn-contact-me:hover {
@@ -338,5 +354,4 @@ body {
   background-color: #fff;
   color: #030637;
   border: solid 2px #030637;
-
 }
