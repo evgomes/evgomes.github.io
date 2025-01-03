@@ -189,19 +189,20 @@ body {
 
 /* Ribbon - Front-end */
 .ribbon.ribbon-frontend span {
-  background: #a45eb8;
-  background: linear-gradient(#a45eb8 0%, #a45eb8 100%);
+  background: #ffd300;
+  background: linear-gradient(#ffd300 0%, #fada5e 100%);
+  color: black;
 }
 
 .ribbon.ribbon-frontend span::before {
   z-index: -1;
-  border-left: 3px solid #a45eb8;
-  border-top: 3px solid #a45eb8;
+  border-left: 3px solid #ffd300;
+  border-top: 3px solid #ffd300;
 }
 
 .ribbon.ribbon-frontend span::after {
-  border-right: 3px solid #9518c7;
-  border-top: 3px solid #9518c7;
+  border-right: 3px solid #ffd300;
+  border-top: 3px solid #ffd300;
 }
 
 /* Ribbon - Open source */
@@ -354,4 +355,8 @@ body {
   background-color: #fff;
   color: #030637;
   border: solid 2px #030637;
+}
+
+#courses .card-footer {
+  padding: 0;
 }
