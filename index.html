@@ -350,6 +350,18 @@
           <h2 class="mb-5">Projects</h2>
           <div class="row g-3">
             <div class="col-12 col-md-6 col-xl-4 d-flex">
+              <div class="card card-project" data-bs-toggle="modal" data-bs-target="#antennasApiModal">
+                <img src="assets/img/projects/antennas-api/api-swagger-mini.png" class="card-img" alt="Antennas API" />
+                <div class="card-body p-0 pb-3">
+                  <h5 class="card-title text-primary">Antennas API</h5>
+                  <p class="card-period small"><strong>Period:</strong> September 2024 - November 2024</p>
+                  <hr class="divider" />
+                  <p class="card-text small">Application that processes millions of signals received from RFID readers, which report the location of jewelry throughout the day for Solomon Brothers Jewelers, a jewelry store based in Atlanta, Georgia...</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-12 col-md-6 col-xl-4 d-flex">
               <div class="card card-project" data-bs-toggle="modal" data-bs-target="#sitesModal">
                 <img src="assets/img/projects/sites/main-page-mini.png" class="card-img" alt="SITES - Transportation for Special Education" />
                 <div class="card-body p-0 pb-3">
@@ -568,6 +580,25 @@
         <div class="resume-section-content">
           <h2 class="mb-5">Courses and Certificates</h2>
           <div class="row g-3">
+            <div class="col-12 col-md-6 col-lg-4">
+              <div class="card card-course rounded-0 h-100">
+                <div class="ribbon ribbon-devops">
+                  <span>DevOps</span>
+                </div>
+                <div class="card-body">
+                  <h4 class="card-title">What is Microsoft Graph</h4>
+                  <p class="card-text mt-4">
+                    <span class="fw-bold">Institution:</span> Udemy<br />
+                    <span class="fw-bold">Workload:</span> 1 hour<br />
+                    <span class="fw-bold">Issue Date:</span> July 12, 2024
+                  </p>
+                </div>
+                <div class="card-footer">
+                  <a class="btn btn-secondary rounded-0 text-white w-100" href="https://learn.microsoft.com/api/achievements/share/en-us/evgomes-4545/UXSFJBY3?sharingId=7DB46A7B9D22D345" target="_blank" rel="noopener">See Certificate</a>
+                </div>
+              </div>
+            </div>
+
             <div class="col-12 col-md-6 col-lg-4">
               <div class="card card-course rounded-0 h-100">
                 <div class="ribbon ribbon-devops">
@@ -990,6 +1021,53 @@
       <!-- /. Blog ./ -->
 
       <!-- Modals -->
+      <div id="antennasApiModal" class="modal" tabindex="-1">
+        <div class="modal-dialog modal-project">
+          <div class="modal-content rounded-0">
+            <div class="modal-header">
+              <h5 class="modal-title text-primary">Antennas API</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body ps-5 pe-5">
+              <p class="card-period small mb-1"><strong>Period:</strong> September 2024 - November 2024</p>
+              <p class="card-period small mb-1">
+                <strong>Company:</strong>
+                <a href="https://www.solomonbrothers.com/" target="_blank" rel="noopener">Solomon Brothers Jewelers</a>
+              </p>
+              <div id="carousel19" class="carousel slide">
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img loading="lazy" src="assets/img/projects/antennas-api/api-swagger.png" class="img-fluid" alt="API - Swagger" />
+                  </div>
+                  <div class="carousel-item">
+                    <img loading="lazy" src="assets/img/projects/antennas-api/hangfire-home.png" class="img-fluid" alt="Hangfire - Main Page" />
+                  </div>
+                  <div class="carousel-item">
+                    <img loading="lazy" src="assets/img/projects/antennas-api/hangfire-jobs.png" class="img-fluid" alt="Hangfire - Jobs" />
+                  </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carousel19" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carousel19" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+              </div>
+
+              <div class="mt-3">
+                <p>Application that processes millions of signals received from RFID readers, which report the location of jewelry throughout the day for Solomon Brothers Jewelers, a jewelry store based in Atlanta, Georgia. The application <strong>processes over 20 million signals daily</strong>.</p>
+
+                <p>The application comprises a RESTful API that processes incoming signals and allows querying data in real-time, and a second application that uses Hangfire to run background processes. Between background processes, the main one summarizes signals into structured log data, enabling managers to know where each jewelry was during the day and how long they stayed at each location.</p>
+
+                <p>The application is built on <strong>ASP.NET Core</strong> and <strong>.NET 9</strong> and uses <strong>SQL Server</strong> for data storage. It runs on an on-premise server using IIS Server.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
       <div id="sitesModal" class="modal" tabindex="-1">
         <div class="modal-dialog modal-project">
           <div class="modal-content rounded-0">
@@ -1003,7 +1081,7 @@
                 <strong>Company:</strong>
                 <a href="https://www.ici.curitiba.org.br/" target="_blank" rel="noopener">Instituto das Cidades Inteligentes</a>
               </p>
-              <div id="carousel17" class="carousel slide">
+              <div id="carousel18" class="carousel slide">
                 <div class="carousel-inner">
                   <div class="carousel-item active">
                     <img loading="lazy" src="assets/img/projects/sites/main-page.png" class="img-fluid" alt="Main Page" />
@@ -1015,11 +1093,11 @@
                     <img loading="lazy" src="assets/img/projects/sites/admin-main-page.png" class="img-fluid" alt="Admin Area - Main Page" />
                   </div>
                 </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#carousel17" data-bs-slide="prev">
+                <button class="carousel-control-prev" type="button" data-bs-target="#carousel18" data-bs-slide="prev">
                   <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                   <span class="visually-hidden">Previous</span>
                 </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#carousel17" data-bs-slide="next">
+                <button class="carousel-control-next" type="button" data-bs-target="#carousel18" data-bs-slide="next">
                   <span class="carousel-control-next-icon" aria-hidden="true"></span>
                   <span class="visually-hidden">Next</span>
                 </button>
@@ -1141,7 +1219,7 @@
               <div class="mt-3">
                 <p>JustOffered is a platform that helps real estate agents manage potential customers by hosting open house events. This platform provides a seamless way of controlling visits, enabling agents to eliminate the use of paper.</p>
                 <p>In addition to managing visits, the solution offers the possibility of recording videos to send personalized messages to customers, agents, and contacts. Furthermore, the platform provides features to customize the agent's website, allowing them to add custom sections as needed.</p>
-                <p>I was responsible for the implementation of all related solutions for this project. The project is built on top of ASP.NET Core and Blazor, and it is composed of a CRM, a website to show listings and open houses, a website that renders agent information according to the configuration in the CRM, and a website to promote open house listings.</p>
+                <p>I was responsible for the implementation of all related solutions for this project. The project is built on top of <strong>ASP.NET Core</strong> and <strong>Blazor</strong>, and it is composed of a CRM, a website to show listings and open houses, a website that renders agent information according to the configuration in the CRM, and a website to promote open house listings.</p>
               </div>
             </div>
           </div>
@@ -1243,7 +1321,7 @@
               <div class="mt-3">
                 <p>Provider Finder is a turnkey solution that is part of the Healthplexa integrated provider data platform offered by ConnectHealth. It is designed to provide an easy-to-use mobile and desktop experience for payers, benefits managers, and employers to connect their members with appropriate healthcare providers.</p>
                 <p>With Provider Finder, members can conduct searches with ease, using various parameters such as name, location, service, or specialty to receive accurate search results. Payers and plans can customize the search results to ensure that preferred providers are prioritized. The cloud-based platform is highly configurable, allowing for the management of multiple lines of business, markets, and networks.</p>
-                <p>Provider Finder is built on top of ASP.NET Core and Apache Lucene, offering a modern solution integrated with the Provider Data Manager solution.</p>
+                <p>Provider Finder is built on top of <strong>ASP.NET Core</strong> and <strong>Apache Lucene</strong>, offering a modern solution integrated with the Provider Data Manager solution.</p>
               </div>
             </div>
           </div>
