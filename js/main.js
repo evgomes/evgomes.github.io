@@ -75,6 +75,16 @@
   let activeFilter = "All";
   let expanded = false;
 
+  // Projects are authored most-recent-first in projects-data.js. The collapsed
+  // "All" view shows the newest few; "Show all" reveals the full sequence.
+  const DEFAULT_VISIBLE = 6;
+
+  // Screenshots that haven't been added yet fall back to a placeholder instead
+  // of a broken-image icon. Drop the real file at the documented path and it
+  // appears automatically.
+  const PLACEHOLDER = "assets/img/projects/_placeholder.svg";
+  const imgFallback = `onerror="this.onerror=null;this.src='${PLACEHOLDER}';this.closest('.project-thumb,.article-cover,.carousel-slide')&&this.closest('.project-thumb,.article-cover,.carousel-slide').classList.add('img-missing')"`;
+
   function projectCard(p) {
     const card = document.createElement("article");
     card.className = "project-card reveal visible";
@@ -86,7 +96,7 @@
     card.innerHTML = `
       <button type="button" class="project-card-btn" aria-haspopup="dialog" aria-label="Open details for ${p.title}">
         <div class="project-thumb">
-          <img loading="lazy" width="640" height="200" src="${p.thumb.src}" alt="${p.thumb.alt}" />
+          <img loading="lazy" width="640" height="200" src="${p.thumb.src}" alt="${p.thumb.alt}" ${imgFallback} />
           <span class="sector-badge ${sectorClass}">${p.sector}</span>
         </div>
         <div class="project-body">
@@ -105,18 +115,18 @@
   function renderProjects() {
     const byFilter =
       activeFilter === "All" ? PROJECTS : PROJECTS.filter((p) => p.sector === activeFilter);
-    const visible = expanded || activeFilter !== "All" ? byFilter : byFilter.filter((p) => p.featured);
+    // Only the unfiltered "All" view collapses; a sector filter shows its full set.
+    const collapsed = activeFilter === "All" && !expanded;
+    const visible = collapsed ? byFilter.slice(0, DEFAULT_VISIBLE) : byFilter;
 
     grid.innerHTML = "";
     visible.forEach((p) => grid.appendChild(projectCard(p)));
 
-    const hiddenCount = byFilter.length - visible.length;
-    showAllBtn.hidden = hiddenCount <= 0;
-    showAllBtn.textContent = `Show all ${PROJECTS.length} projects`;
-    countNote.textContent =
-      activeFilter === "All" && !expanded
-        ? `Showing ${visible.length} featured projects of ${PROJECTS.length}`
-        : `Showing ${visible.length} project${visible.length === 1 ? "" : "s"}`;
+    showAllBtn.hidden = visible.length >= byFilter.length;
+    showAllBtn.textContent = "Show all projects";
+    countNote.textContent = collapsed
+      ? `Showing the ${visible.length} most recent projects`
+      : `Showing ${visible.length} project${visible.length === 1 ? "" : "s"}`;
   }
 
   if (filterBar) {
@@ -152,15 +162,22 @@
   const dialogBody = document.getElementById("project-dialog-body");
   const carouselTrack = document.getElementById("carousel-track");
   const carouselCounter = document.getElementById("carousel-counter");
+  const carouselCaption = document.getElementById("carousel-caption");
   const carouselPrev = document.getElementById("carousel-prev");
   const carouselNext = document.getElementById("carousel-next");
   let slideIndex = 0;
   let slideCount = 0;
+  let currentImages = [];
 
   function showSlide(i) {
     slideIndex = (i + slideCount) % slideCount;
     carouselTrack.style.transform = `translateX(-${slideIndex * 100}%)`;
     carouselCounter.textContent = `${slideIndex + 1} / ${slideCount}`;
+    // Caption describes the current slide; only shown inside the gallery dialog.
+    const img = currentImages[slideIndex];
+    const caption = img && (img.caption || img.alt);
+    carouselCaption.textContent = caption || "";
+    carouselCaption.hidden = !caption;
   }
 
   function openProject(p) {
@@ -182,9 +199,10 @@
     carouselTrack.innerHTML = p.images
       .map(
         (img) =>
-          `<div class="carousel-slide"><img loading="lazy" src="${img.src}" alt="${img.alt}" /></div>`
+          `<div class="carousel-slide"><img loading="lazy" src="${img.src}" alt="${img.alt}" ${imgFallback} /></div>`
       )
       .join("");
+    currentImages = p.images;
     slideCount = p.images.length;
     const hasMultiple = slideCount > 1;
     carouselPrev.hidden = !hasMultiple;

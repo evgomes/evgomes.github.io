@@ -814,6 +814,24 @@ section:nth-of-type(even) {
   transition: transform 0.35s ease;
 }
 
+/* Missing screenshots show a centered "coming soon" placeholder, and skip the
+   dark overlay so the placeholder text stays readable. */
+.project-thumb.img-missing img,
+.article-cover.img-missing img {
+  object-fit: cover;
+  object-position: center;
+}
+
+.project-thumb.img-missing::after,
+.article-cover.img-missing::after {
+  display: none;
+}
+
+.carousel-slide.img-missing img {
+  object-fit: contain;
+  width: 100%;
+}
+
 /* Shadow overlay on card imagery (not applied to gallery/carousel images) so
    badges keep contrast on bright screenshots. */
 .project-thumb::after,
@@ -1022,7 +1040,28 @@ section:nth-of-type(even) {
   padding: 0.15rem 0.6rem;
   border-radius: 999px;
   border: 1px solid var(--border);
+  z-index: 2;
+}
+
+/* Caption bar for the current gallery image (dialog only). */
+#carousel-caption {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: 0;
   z-index: 1;
+  padding: 2.2rem 1.1rem 0.75rem;
+  padding-right: 4.5rem; /* leave room for the counter */
+  color: #f1f5f9;
+  font-size: 0.85rem;
+  line-height: 1.4;
+  background: linear-gradient(transparent, rgba(2, 6, 15, 0.82) 55%);
+  pointer-events: none;
+}
+
+#carousel-caption[hidden] {
+  display: none;
 }
 
 .dialog-body p:last-child {

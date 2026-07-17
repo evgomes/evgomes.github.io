@@ -22,7 +22,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet" />
     <!-- Icons (CSS build - no JS injection) -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link href="css/style.css" rel="stylesheet" />
+    <link href="css/style.css?v=2" rel="stylesheet" />
 
     <!-- Structured data -->
     <script type="application/ld+json">
@@ -171,6 +171,7 @@
                 <h3><i class="fa-solid fa-building-columns" aria-hidden="true"></i> Industries I've served</h3>
                 <ul>
                   <li>Government &amp; Smart Cities</li>
+                  <li>Public Security</li>
                   <li>Healthcare</li>
                   <li>Education</li>
                   <li>Real Estate</li>
@@ -232,6 +233,7 @@
           <p class="section-lede reveal">A selection of systems I've architected, led, or built. From government platforms serving millions to healthcare data products and real-time processing APIs.</p>
           <div id="projects-filters" class="projects-toolbar reveal" role="group" aria-label="Filter projects by sector"></div>
           <p id="projects-count" aria-live="polite"></p>
+          <!-- Cards render from js/projects-data.js (most-recent-first); edit that file to add projects. -->
           <div id="projects-grid"></div>
           <noscript
             ><p>Enable JavaScript to browse the project gallery, or see my work on <a href="https://www.linkedin.com/in/evandro-gayer-gomes">LinkedIn</a>.</p></noscript
@@ -662,7 +664,8 @@
           <button id="carousel-next" type="button" class="carousel-btn" aria-label="Next image">
             <i class="fa-solid fa-chevron-right" aria-hidden="true"></i>
           </button>
-          <span id="carousel-counter" aria-live="polite"></span>
+          <p id="carousel-caption" aria-live="polite"></p>
+          <span id="carousel-counter"></span>
         </div>
         <div id="project-dialog-body" class="dialog-body"></div>
       </div>
@@ -678,7 +681,7 @@
       </div>
     </footer>
 
-    <script src="js/projects-data.js"></script>
-    <script src="js/main.js"></script>
+    <script src="js/projects-data.js?v=2"></script>
+    <script src="js/main.js?v=2"></script>
   </body>
 </html>

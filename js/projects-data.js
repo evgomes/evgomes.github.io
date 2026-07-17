@@ -1,13 +1,179 @@
 /**
  * Project catalog. Each entry renders a card in the Projects grid and a
  * detail dialog with an image carousel. Adding a project is a data edit:
- * append an object here - no markup changes needed.
+ * insert an object here - no markup changes needed.
+ *
+ * Order matters: entries are authored most-recent-first (newest at the top).
+ * The collapsed grid shows the first few; "Show all" reveals the full list in
+ * this same order. Put new projects at the top.
  *
  * sector: one axis only (what a client filters by).
- * featured: shown by default before "Show all projects" is clicked.
  * body: full description paragraphs (HTML allowed), shown in the dialog.
  */
 const PROJECTS = [
+  {
+    id: "fronteira-labs",
+    title: "Fronteira Labs",
+    period: "June 2026 - Present",
+    company: { name: "Fronteira Labs", url: "https://fronteiralabs.com.br/" },
+    link: "https://fronteiralabs.com.br/",
+    sector: "AI Innovation",
+    tags: ["C#", ".NET 10", "AI Agents", "CMS", "SSO"],
+    thumb: { src: "assets/img/projects/fronteira-labs/index.png", alt: "Fronteira Labs homepage" },
+    summary:
+      "My own consulting and content company: a bilingual blog and consulting site, a custom CMS, and an SSO, all built on C# and .NET 10. I build and maintain it with my own AI agent harness.",
+    images: [
+      { src: "assets/img/projects/fronteira-labs/index.png", alt: "Blog and consulting homepage", caption: "Public homepage: article search, category filters, and a bilingual content feed." },
+      { src: "assets/img/projects/fronteira-labs/cms-index.png", alt: "Custom CMS", caption: "Custom CMS dashboard: article and media stats, recent articles, and quick actions." },
+    ],
+    body: [
+      "<p><a href=\"https://fronteiralabs.com.br/\" target=\"_blank\" rel=\"noopener\">Fronteira Labs</a> is my consulting and content company, online since June 2026, working \"on the frontier of innovation and business\". It shares quality content about artificial intelligence, technology, and business, and offers AI consulting, training, and custom solutions for the Brazilian and United States markets.</p>",
+      "<p>The platform is composed of three applications, all built on <strong>C# and .NET 10</strong>: the main blog and consulting website (bilingual, in English and Portuguese), a custom <strong>CMS</strong> for authoring and managing content, and a dedicated <strong>SSO</strong> for authentication. I build and maintain the whole stack using my own AI agent harness, and use AI processes to research topics and assist with writing.</p>",
+      "<p><strong>Important:</strong> I do not publish AI-generated content. AI is only a helper in the research and drafting process. Every article is carefully reviewed, edited, and validated by me before it goes live, so the final content reflects my own judgment, voice, and standards.</p>",
+    ],
+  },
+  // ---------------------------------------------------------------------------
+  // BusyKeys (April 2025 - Present). Selected work from the AI-native product suite.
+  // ---------------------------------------------------------------------------
+  {
+    id: "zonifymo",
+    title: "ZonifyMo",
+    period: "2025 - Present",
+    company: { name: "BusyKeys", url: "https://busykeys.com/" },
+    link: null,
+    sector: "Real Estate",
+    tags: [".NET / C#", "Generative AI", "Geospatial", "CLI"],
+    thumb: { src: "assets/img/projects/zonifymo/dashboard.png", alt: "ZonifyMo dashboard" },
+    summary:
+      "AI-assisted real estate workflow platform that takes a property from raw lead to underwritten deal: leads, zoning, comparable sales and rents, risk screening, AI enrichment, and Excel proforma exports.",
+    images: [
+      { src: "assets/img/projects/zonifymo/dashboard.png", alt: "Dashboard", caption: "Dashboard with total, active, and draft deal counters and the signed-in user's profile." },
+      { src: "assets/img/projects/zonifymo/add-lead.png", alt: "Add lead", caption: "Add Lead panel: property location, deal availability, broker details, and notes with risk flags." },
+      { src: "assets/img/projects/zonifymo/ai-enrichment-feature-redacted.png", alt: "AI lead enrichment", caption: "AI Enrichment proposing field corrections with sources and confidence levels (sensitive data redacted)." },
+    ],
+    body: [
+      "<p>ZonifyMo is a real estate workflow application that helps investors and operators move a property from raw lead to underwritten deal. Users manage leads, properties, deals, and reports, with screening and risk flags, promotion of promising leads to subject properties, zoning and map lookups, and comparable sales and rents to support valuation.</p>",
+      "<p>AI runs through the workflow: incoming leads are parsed and enriched automatically, and prompt management lets the team tune that behavior. The platform also exposes API keys, CLI workflows, notes and attachments, and geospatial utilities, and can export an Excel proforma. As a founding engineer at <strong>BusyKeys</strong>, I contribute to the architecture and implementation across the API, AI enrichment, and delivery.</p>",
+    ],
+  },
+  {
+    id: "corejail",
+    title: "CoreJail",
+    period: "2025 - Present",
+    company: { name: "BusyKeys", url: "https://busykeys.com/" },
+    link: null,
+    sector: "Public Security",
+    tags: [".NET / C#", "Reporting", "PDF / Excel", "Integrations"],
+    thumb: { src: "assets/img/projects/corejail/main-view.png", alt: "CoreJail main view" },
+    summary:
+      "Jail-management system for county jails: inmate tracking, bookings, housing, classifications, court and sentence records, reporting, and a public inmate lookup, with partner-system integrations.",
+    images: [
+      { src: "assets/img/projects/corejail/main-view.png", alt: "Main view", caption: "Facility dashboard: inmates in custody, temporary releases, and recent bookings." },
+      { src: "assets/img/projects/corejail/intake-form.png", alt: "Intake and booking form", caption: "Book Inmate intake wizard, starting by identifying or creating the offender record." },
+    ],
+    body: [
+      "<p>CoreJail is a jail-management system that covers the full custody lifecycle: jail hierarchy and housing, inmate classification, booking and release workflows, and case, offense, court, sentence, and warrant tracking, alongside offender records and administration.</p>",
+      "<p>It provides search, reporting, image handling, and PDF and Excel exports, a public inmate-lookup, integrations with external partner systems, and data-migration tooling. Built on <strong>.NET</strong>, it serves jail and sheriff's office staff as well as the public. I work on its architecture and backend as part of the <strong>BusyKeys</strong> engineering team.</p>",
+    ],
+  },
+  {
+    id: "boss365-chat",
+    title: "Boss365 Chat",
+    period: "2025 - Present",
+    company: { name: "BusyKeys", url: "https://busykeys.com/" },
+    link: null,
+    sector: "AI Innovation",
+    tags: ["Messaging", "AI Agents", "Real-time", "Desktop"],
+    thumb: { src: "assets/img/projects/boss365-chat/main-chat-area.png", alt: "Boss365 Chat main chat area" },
+    summary:
+      "A standalone, headless messaging platform for human, bot, group, and channel conversations, with AI agent bots, slash commands, presence, and both web and desktop clients.",
+    images: [
+      { src: "assets/img/projects/boss365-chat/main-chat-area.png", alt: "Main chat area", caption: "Chat workspace with the conversation list, human and bot chats, and a slash-command message." },
+      { src: "assets/img/projects/boss365-chat/onboard-bot.png", alt: "Create a bot", caption: "Creating a bot: subject ID, username, display name, and an agent-framework option." },
+    ],
+    body: [
+      "<p>Boss365 Chat is an embeddable messaging platform that other BusyKeys applications and teams can build on. It supports direct messages, bot conversations, groups, and channels, with attachments, replies, forwards, soft-delete, long-poll updates, presence, typing indicators, and mute controls.</p>",
+      "<p>Beyond human messaging, it hosts AI agent bots and slash commands so conversations can trigger automated work, and it ships with a web UI and a desktop client. I contributed to the architecture of the headless API and its real-time and agent-bot features.</p>",
+    ],
+  },
+  {
+    id: "busykeys-sso",
+    title: "BusyKeys SSO",
+    period: "2025 - Present",
+    company: { name: "BusyKeys", url: "https://busykeys.com/" },
+    link: null,
+    sector: "AI Innovation",
+    tags: ["OpenID Connect", "Identity", ".NET / C#"],
+    thumb: { src: "assets/img/projects/busykeys-sso/login.png", alt: "BusyKeys SSO login" },
+    summary:
+      "The BusyKeys authentication authority: OpenID Connect sign-in, invitation-based registration, profile and password management, and administration of users and OIDC clients.",
+    images: [
+      { src: "assets/img/projects/busykeys-sso/login.png", alt: "Login", caption: "Sign-in page for the BusyKeys identity provider." },
+      { src: "assets/img/projects/busykeys-sso/admin-area.png", alt: "Administration area", caption: "Admin console to manage users, invitations, and OIDC clients." },
+    ],
+    body: [
+      "<p>BusyKeys SSO is the platform's identity provider. It implements OpenID Connect with authorization-code and refresh-token flows, handling login and logout, invitation-based registration, and profile and password pages for end users.</p>",
+      "<p>For administrators it offers user administration, invitations, and OIDC client management, plus management APIs, CLI seed commands, and a health endpoint. I contributed to the authentication flows and the client and user management surfaces.</p>",
+    ],
+  },
+  {
+    id: "email-gateway",
+    title: "Email Gateway",
+    period: "2025 - Present",
+    company: { name: "BusyKeys", url: "https://busykeys.com/" },
+    link: null,
+    sector: "AI Innovation",
+    tags: ["Integrations", "OAuth", "Gmail / O365", "Keycloak"],
+    thumb: { src: "assets/img/projects/email-gateway/swagger.png", alt: "Email Gateway API (Swagger)" },
+    summary:
+      "Centralized gateway for email-provider integration: connect Gmail and Office 365, sync inbound mail, evaluate rules, run retryable actions, and deliver outbound messages behind a provider abstraction.",
+    images: [
+      { src: "assets/img/projects/email-gateway/swagger.png", alt: "API documentation (Swagger)", caption: "OpenAPI (Swagger) surface: inbound and outbound email endpoints and rule-action executions." },
+    ],
+    body: [
+      "<p>The Email Gateway centralizes how BusyKeys connects to email providers. It links Gmail and Office 365 accounts with encrypted OAuth token storage behind a provider abstraction, polls inbound mail, and evaluates rules that trigger actions such as delete or webhook, executed with retries.</p>",
+      "<p>It exposes inbound APIs and outbound enqueue-and-delivery, refreshes tokens automatically, and supports API, JWT, and API-key authentication with Keycloak/OIDC login and OAuth pages. I worked on the provider abstraction and the rule-and-action pipeline.</p>",
+    ],
+  },
+  {
+    id: "email-send-service",
+    title: "Email Send Service",
+    period: "2025 - Present",
+    company: { name: "BusyKeys", url: "https://busykeys.com/" },
+    link: null,
+    sector: "AI Innovation",
+    tags: ["Microsoft Graph", "Queue", "Email", ".NET / C#"],
+    thumb: { src: "assets/img/projects/email-send-service/dashboard.png", alt: "Email Send Service dashboard" },
+    summary:
+      "Internal service for transactional and campaign email: single sends, broadcasts, scheduled campaigns, templates and merge fields, contacts and lists, suppressions, and delivery through Microsoft Graph.",
+    images: [
+      { src: "assets/img/projects/email-send-service/dashboard.png", alt: "Dashboard", caption: "Delivery overview: delivery rate, message and queue stats, and messages-per-day and status charts." },
+      { src: "assets/img/projects/email-send-service/compose-email.png", alt: "Compose email", caption: "Compose screen: sender and contact pickers, templates, and a rich-text body with merge fields." },
+    ],
+    body: [
+      "<p>The Email Send Service handles all outbound email for BusyKeys, from one-off transactional messages to broadcasts and scheduled campaigns. It manages templates with merge fields, contacts and lists, senders, suppressions, and unsubscribe handling, and records a full message history.</p>",
+      "<p>Delivery runs through a processing queue and Microsoft Graph, with bounce and complaint webhooks feeding back into suppressions, and an admin dashboard plus API keys for internal callers. I contributed to the queue-based delivery architecture and the campaign and suppression features.</p>",
+    ],
+  },
+  {
+    id: "sms-gateway",
+    title: "SMS Gateway",
+    period: "2025 - Present",
+    company: { name: "BusyKeys", url: "https://busykeys.com/" },
+    link: null,
+    sector: "AI Innovation",
+    tags: ["SMS", "RabbitMQ", "Twilio / TextMagic", "EF Core"],
+    thumb: { src: "assets/img/projects/sms-gateway/swagger.png", alt: "SMS Gateway API (Swagger)" },
+    summary:
+      "HTTP API for outbound SMS: create messages and dispatch them through configured providers (TextMagic, Twilio) with queue processing, persisted delivery attempts, and automatic retries.",
+    images: [
+      { src: "assets/img/projects/sms-gateway/swagger.png", alt: "API documentation (Swagger)", caption: "OpenAPI (Swagger) surface: the text-message send endpoint and its request schema." },
+    ],
+    body: [
+      "<p>The SMS Gateway is a small, focused service that lets BusyKeys applications send SMS through a single API. Callers authenticate with API keys and send against tenant environment and source-number configuration, and the gateway routes delivery through TextMagic, Twilio, or an in-memory provider.</p>",
+      "<p>Messages flow through a RabbitMQ queue, each delivery attempt is persisted, and failures are rescheduled by a background retry poller. I designed the provider abstraction and the queue-and-retry pipeline, backed by EF Core.</p>",
+    ],
+  },
   {
     id: "antennas-api",
     title: "Antennas API",
@@ -16,7 +182,6 @@ const PROJECTS = [
     link: null,
     sector: "Retail",
     tags: [".NET 9", "ASP.NET Core", "SQL Server", "Hangfire"],
-    featured: true,
     thumb: { src: "assets/img/projects/antennas-api/api-swagger-mini.png", alt: "Antennas API - Swagger documentation" },
     summary:
       "Real-time RFID tracking for a jewelry store in Atlanta: an ASP.NET Core platform that processes over 20 million signals a day and tells managers where every piece of jewelry has been.",
@@ -39,7 +204,6 @@ const PROJECTS = [
     link: null,
     sector: "Government",
     tags: [".NET", "Angular", "CI/CD", "Architecture"],
-    featured: true,
     thumb: { src: "assets/img/projects/sites/main-page-mini.png", alt: "SITES - Transportation for Special Education main page" },
     summary:
       "Platform that manages Curitiba's special-education school transportation: students request adapted bus transport and staff review requests according to local law. I architected the solution and led the development team.",
@@ -64,7 +228,6 @@ const PROJECTS = [
     link: null,
     sector: "Government",
     tags: ["ASP.NET Core", "Angular", "RabbitMQ", "SignalR"],
-    featured: true,
     thumb: { src: "assets/img/projects/controle-refeicoes/start-page-mini.png", alt: "Meal Management System start page" },
     summary:
       "Distributed system the Department of Education of Curitiba uses to plan and bill school meals across hundreds of public schools: menus, nutrients, suppliers, and billing in one platform.",
@@ -90,7 +253,6 @@ const PROJECTS = [
     link: "https://justoffered.com",
     sector: "Real Estate",
     tags: ["ASP.NET Core", "Blazor", "CRM"],
-    featured: true,
     thumb: { src: "assets/img/projects/just-offered-new-app/crm-open-house-details-mini.png", alt: "JustOffered CRM open house details" },
     summary:
       "Open-house platform for US real-estate agents: paperless visit management, personalized video messages, and customizable agent websites. I implemented all related solutions end-to-end with ASP.NET Core and Blazor.",
@@ -114,7 +276,6 @@ const PROJECTS = [
     link: "https://connecthealthco.com/solutions/provider-finder",
     sector: "Healthcare",
     tags: ["ASP.NET Core", "Apache Lucene", "Search"],
-    featured: true,
     thumb: { src: "assets/img/projects/provider-finder/index-page.png", alt: "Provider Finder index page" },
     summary:
       "Healthcare provider search used by payers, benefits managers, and employers to connect members with the right providers: fast, configurable search built on ASP.NET Core and Apache Lucene.",
@@ -138,7 +299,6 @@ const PROJECTS = [
     link: "https://connecthealthco.com/solutions/provider-data-manager",
     sector: "Healthcare",
     tags: ["ASP.NET Core", "Blazor", "Data Platform"],
-    featured: false,
     thumb: { src: "assets/img/projects/provider-data-manager/professional-details.jpg", alt: "Provider Data Manager professional details" },
     summary:
       "Enterprise data management system to collect, analyze, monitor, and distribute healthcare provider data, processing hundreds of thousands of records at a time.",
@@ -162,7 +322,6 @@ const PROJECTS = [
     link: "https://connecthealthco.com/solutions/provider-data-quality",
     sector: "Healthcare",
     tags: ["ASP.NET Core", "Data Quality"],
-    featured: false,
     thumb: { src: "assets/img/projects/provider-data-quality/verification-cases.png", alt: "Provider Data Quality verification cases" },
     summary:
       "The Provider Data Quality (PDQ) solution is a comprehensive solution that uses a combination of advanced technology and strict policies to verify provider directory data at the source.",
@@ -184,7 +343,6 @@ const PROJECTS = [
     link: "https://github.com/evgomes/gestao-de-pedidos",
     sector: "Open Source",
     tags: ["Node.js", "React.js", "MongoDB"],
-    featured: false,
     thumb: { src: "assets/img/projects/orders-management/index-mini.png", alt: "Orders Management index page" },
     summary:
       "Cosmetics order management system written in JavaScript. It uses Node.js, React.js, and MongoDB as the main technologies, released as open source.",
@@ -205,7 +363,6 @@ const PROJECTS = [
     link: "https://cliqueeconomia.curitiba.pr.gov.br/",
     sector: "Government",
     tags: ["ASP.NET Core", "Team Leadership"],
-    featured: false,
     thumb: { src: "assets/img/projects/clique-economia/index-mini.png", alt: "Clique Economia index page" },
     summary:
       "System that allows citizens from Curitiba to discover which markets offer better prices for a given list of products. I led the team that delivered it.",
@@ -229,7 +386,6 @@ const PROJECTS = [
     link: "https://feiradolargo.curitiba.pr.gov.br",
     sector: "Government",
     tags: ["ASP.NET Core", "COVID-19 Response"],
-    featured: false,
     thumb: { src: "assets/img/projects/feira-largo/index-mini.png", alt: "Feira do Largo website index page" },
     summary:
       "Website built during the COVID-19 pandemic so merchants of the Largo da Ordem Street Fair in Curitiba could sell their products online.",
@@ -251,7 +407,6 @@ const PROJECTS = [
     link: "https://feiraslivres.curitiba.pr.gov.br/",
     sector: "Government",
     tags: ["ASP.NET Core", "COVID-19 Response"],
-    featured: false,
     thumb: { src: "assets/img/projects/feiras-livres/index-mini.png", alt: "Feiras Livres website index page" },
     summary:
       "System where Curitiba food marketers can show their products online, built in a few days during the COVID-19 pandemic and featured many times on local media.",
@@ -270,7 +425,6 @@ const PROJECTS = [
     link: "https://justoffered.com",
     sector: "Real Estate",
     tags: ["ASP.NET Core", "REST API", "Blazor"],
-    featured: false,
     thumb: { src: "assets/img/projects/justoffered-api/index-mini.png", alt: "JustOffered REST API" },
     summary:
       "REST API for the JustOffered open-house platform. I worked as a consultant defining the software architecture and implementing tens of functionalities.",
@@ -288,7 +442,6 @@ const PROJECTS = [
     link: "https://servidor.curitiba.pr.gov.br",
     sector: "Government",
     tags: ["ASP.NET Core", "Integrations", "High Availability"],
-    featured: true,
     thumb: { src: "assets/img/projects/civil-servants/index-mini.png", alt: "Civil Servants website index page" },
     summary:
       "Portal delivering 300+ online services to Curitiba's civil servants: 50+ integrated services across 7 REST APIs and millions of accesses per month. I led the project and defined its architecture.",
@@ -315,7 +468,6 @@ const PROJECTS = [
     link: "https://github.com/evgomes/chat-node-socket-io",
     sector: "Open Source",
     tags: ["Node.js", "Socket.IO"],
-    featured: false,
     thumb: { src: "assets/img/projects/chat-node/chat-mini.png", alt: "Realtime Chat" },
     summary:
       "A simple application built on top of Node.js that uses Socket.IO to handle real-time message exchange, developed to study and demonstrate the stack.",
@@ -333,7 +485,6 @@ const PROJECTS = [
     link: "https://www.curitiba.pr.gov.br",
     sector: "Government",
     tags: ["CMS", "High Traffic"],
-    featured: false,
     thumb: { src: "assets/img/projects/curitiba-city-hall/home-mini.png", alt: "Curitiba City Hall website index page" },
     summary:
       "Curitiba's main website, modernized with journalistic best practices. It receives millions of visitors every month. I played a role in all stages of development.",
@@ -357,7 +508,6 @@ const PROJECTS = [
     link: "https://transito.curitiba.pr.gov.br",
     sector: "Government",
     tags: ["CMS", "Responsive Design"],
-    featured: false,
     thumb: { src: "assets/img/projects/setran/home-mini.png", alt: "Curitiba Traffic website index page" },
     summary:
       "Dynamic website providing citizens with information and services related to Curitiba's traffic system, with an integrated custom CMS.",
@@ -380,7 +530,6 @@ const PROJECTS = [
     link: "https://polis.ici.curitiba.org.br",
     sector: "Government",
     tags: ["CMS Platform", "Accessibility"],
-    featured: false,
     thumb: { src: "assets/img/projects/polis/home-mini.png", alt: "Polis index page" },
     summary:
       "CMS platform for city halls with resources to share news, deliver services, conduct surveys, and generate protocol forms for citizens.",
@@ -405,7 +554,6 @@ const PROJECTS = [
     link: "http://redecidadedigital.com.br",
     sector: "Government",
     tags: ["CMS", "Performance"],
-    featured: false,
     thumb: { src: "assets/img/projects/rede-cidade-digital/home-mini.png", alt: "Rede Cidade Digital index page" },
     summary:
       "Website developed on the Polis platform to provide users with news and event information related to smart cities.",
