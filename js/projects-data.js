@@ -73,7 +73,7 @@ const PROJECTS = [
     ],
     body: [
       "<p>CoreJail is a jail-management system that covers the full custody lifecycle: jail hierarchy and housing, inmate classification, booking and release workflows, and case, offense, court, sentence, and warrant tracking, alongside offender records and administration.</p>",
-      "<p>It provides search, reporting, image handling, and PDF and Excel exports, a public inmate-lookup, integrations with external partner systems, and data-migration tooling. Built on <strong>.NET</strong>, it serves jail and sheriff's office staff as well as the public. I work on its architecture and backend as part of the <strong>BusyKeys</strong> engineering team.</p>",
+      "<p>It provides search, reporting, image handling, and PDF and Excel exports, a public inmate-lookup, integrations with external partner systems, and data-migration tooling. Built on <strong>.NET</strong> and <strong>React.js</strong>, it serves jail and sheriff's office staff as well as the public. I work on its architecture and backend as part of the <strong>BusyKeys</strong> engineering team.</p>",
     ],
   },
   {
@@ -93,7 +93,7 @@ const PROJECTS = [
     ],
     body: [
       "<p>Boss365 Chat is an embeddable messaging platform that other BusyKeys applications and teams can build on. It supports direct messages, bot conversations, groups, and channels, with attachments, replies, forwards, soft-delete, long-poll updates, presence, typing indicators, and mute controls.</p>",
-      "<p>Beyond human messaging, it hosts AI agent bots and slash commands so conversations can trigger automated work, and it ships with a web UI and a desktop client. I contributed to the architecture of the headless API and its real-time and agent-bot features.</p>",
+      "<p>Beyond human messaging, it hosts AI agent bots and slash commands so conversations can trigger automated work, and it ships with a web UI and a desktop client. I designed and implemented the full solution, as well as the integration with BusyKeys' internal agent platform.</p>",
     ],
   },
   {
@@ -113,7 +113,7 @@ const PROJECTS = [
     ],
     body: [
       "<p>BusyKeys SSO is the platform's identity provider. It implements OpenID Connect with authorization-code and refresh-token flows, handling login and logout, invitation-based registration, and profile and password pages for end users.</p>",
-      "<p>For administrators it offers user administration, invitations, and OIDC client management, plus management APIs, CLI seed commands, and a health endpoint. I contributed to the authentication flows and the client and user management surfaces.</p>",
+      "<p>For administrators it offers user administration, invitations, and OIDC client management, plus management APIs, CLI seed commands, and a health endpoint.</p>",
     ],
   },
   {
@@ -131,8 +131,8 @@ const PROJECTS = [
       { src: "assets/img/projects/email-gateway/swagger.png", alt: "API documentation (Swagger)", caption: "OpenAPI (Swagger) surface: inbound and outbound email endpoints and rule-action executions." },
     ],
     body: [
-      "<p>The Email Gateway centralizes how BusyKeys connects to email providers. It links Gmail and Office 365 accounts with encrypted OAuth token storage behind a provider abstraction, polls inbound mail, and evaluates rules that trigger actions such as delete or webhook, executed with retries.</p>",
-      "<p>It exposes inbound APIs and outbound enqueue-and-delivery, refreshes tokens automatically, and supports API, JWT, and API-key authentication with Keycloak/OIDC login and OAuth pages. I worked on the provider abstraction and the rule-and-action pipeline.</p>",
+      "<p>The Email Gateway centralizes how BusyKeys connects to email providers. It links multiple email providers such as Gmail and Office 365 accounts with encrypted OAuth token storage behind a provider abstraction, polls inbound mail, and evaluates rules that trigger actions such as delete or webhook, executed with retries.</p>",
+      "<p>It exposes inbound APIs and outbound enqueue-and-delivery, refreshes tokens automatically, and supports API, JWT, and API-key authentication with Keycloak/OIDC login and OAuth pages.</p>",
     ],
   },
   {
@@ -152,7 +152,7 @@ const PROJECTS = [
     ],
     body: [
       "<p>The Email Send Service handles all outbound email for BusyKeys, from one-off transactional messages to broadcasts and scheduled campaigns. It manages templates with merge fields, contacts and lists, senders, suppressions, and unsubscribe handling, and records a full message history.</p>",
-      "<p>Delivery runs through a processing queue and Microsoft Graph, with bounce and complaint webhooks feeding back into suppressions, and an admin dashboard plus API keys for internal callers. I contributed to the queue-based delivery architecture and the campaign and suppression features.</p>",
+      "<p>Delivery runs through a processing queue and Microsoft Graph, with bounce and complaint webhooks feeding back into suppressions, and an admin dashboard plus API keys for internal callers.</p>",
     ],
   },
   {
@@ -170,8 +170,8 @@ const PROJECTS = [
       { src: "assets/img/projects/sms-gateway/swagger.png", alt: "API documentation (Swagger)", caption: "OpenAPI (Swagger) surface: the text-message send endpoint and its request schema." },
     ],
     body: [
-      "<p>The SMS Gateway is a small, focused service that lets BusyKeys applications send SMS through a single API. Callers authenticate with API keys and send against tenant environment and source-number configuration, and the gateway routes delivery through TextMagic, Twilio, or an in-memory provider.</p>",
-      "<p>Messages flow through a RabbitMQ queue, each delivery attempt is persisted, and failures are rescheduled by a background retry poller. I designed the provider abstraction and the queue-and-retry pipeline, backed by EF Core.</p>",
+      "<p>The SMS Gateway is a small, focused service that lets BusyKeys applications send SMS through a single API. Callers authenticate with API keys and send against tenant environment and source-number configuration, and the gateway routes delivery through TextMagic, Twilio, and other providers.</p>",
+      "<p>Messages flow through a RabbitMQ queue, each delivery attempt is persisted, and failures are rescheduled by a background retry poller. I designed and implemented the full solution.</p>",
     ],
   },
   {

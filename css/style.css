@@ -23,7 +23,7 @@
 
   /* Ambient background effect */
   --grid-line: rgba(148, 163, 184, 0.06);
-  --bg-glow: rgba(245, 158, 11, 0.06);
+  --grid-scan-line: rgba(148, 163, 184, 0.2);
 
   --font-sans: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
   --font-mono: "JetBrains Mono", ui-monospace, "Cascadia Code", Consolas, monospace;
@@ -54,7 +54,7 @@
     --shadow: 0 12px 32px rgba(15, 23, 42, 0.08);
 
     --grid-line: rgba(15, 23, 42, 0.05);
-    --bg-glow: rgba(180, 83, 9, 0.05);
+    --grid-scan-line: rgba(15, 23, 42, 0.14);
 
     color-scheme: light;
   }
@@ -99,7 +99,7 @@ body {
 #bg-fx {
   position: fixed;
   inset: 0;
-  z-index: -1;
+  z-index: -2;
   pointer-events: none;
   overflow: hidden;
   background-image: linear-gradient(var(--grid-line) 1px, transparent 1px),
@@ -107,25 +107,25 @@ body {
   background-size: 46px 46px;
 }
 
-#bg-glow {
+/* Brighter grid revealed in a soft circle around the cursor (grid scan). The
+   mask defaults off-screen, so nothing shows until main.js tracks the cursor
+   (i.e. it stays hidden on touch devices, where the effect is skipped). */
+#grid-scan {
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 38vmax;
-  height: 38vmax;
-  margin: -19vmax; /* center the circle on the layer origin (0,0) */
-  border-radius: 50%;
-  background: radial-gradient(circle, var(--bg-glow) 0%, transparent 60%);
-  /* moved to the cursor via CSS vars set in main.js */
-  transform: translate3d(var(--gx, 50vw), var(--gy, 22vh), 0);
-  transition: transform 0.3s ease-out;
-  will-change: transform;
+  inset: 0;
+  background-image: linear-gradient(var(--grid-scan-line) 1px, transparent 1px),
+    linear-gradient(90deg, var(--grid-scan-line) 1px, transparent 1px);
+  background-size: 46px 46px;
+  -webkit-mask-image: radial-gradient(circle 200px at var(--mx, -500px) var(--my, -500px), #000 0%, transparent 68%);
+  mask-image: radial-gradient(circle 200px at var(--mx, -500px) var(--my, -500px), #000 0%, transparent 68%);
 }
 
-@media (prefers-reduced-motion: reduce) {
-  #bg-glow {
-    transition: none;
-  }
+/* Particle + constellation canvas (rendered in main.js). */
+#fx-canvas {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
 }
 
 img {
@@ -450,18 +450,6 @@ section:nth-of-type(even) {
 .hero {
   padding: 10rem 0 6rem;
   position: relative;
-  overflow: hidden;
-}
-
-.hero::after {
-  content: "";
-  position: absolute;
-  top: -220px;
-  right: -160px;
-  width: 560px;
-  height: 560px;
-  background: radial-gradient(circle, var(--glow), transparent 65%);
-  pointer-events: none;
 }
 
 .hero .container {

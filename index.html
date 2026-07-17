@@ -23,7 +23,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet" />
     <!-- Icons (CSS build - no JS injection) -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link href="css/style.css?v=5" rel="stylesheet" />
+    <link href="css/style.css?v=8" rel="stylesheet" />
 
     <!-- Structured data -->
     <script type="application/ld+json">
@@ -59,8 +59,10 @@
   </head>
 
   <body>
-    <!-- Ambient page background: static grid + a soft glow that follows the cursor -->
-    <div id="bg-fx" aria-hidden="true"><div id="bg-glow"></div></div>
+    <!-- Ambient page background: static grid, a cursor-revealed grid scan, and a
+         particle + constellation canvas (see main.js). -->
+    <div id="bg-fx" aria-hidden="true"><div id="grid-scan"></div></div>
+    <canvas id="fx-canvas" aria-hidden="true"></canvas>
     <a class="skip-link" href="#main">Skip to content</a>
 
     <!-- Navigation -->
@@ -685,6 +687,6 @@
     </footer>
 
     <script src="js/projects-data.js?v=2"></script>
-    <script src="js/main.js?v=3"></script>
+    <script src="js/main.js?v=7"></script>
   </body>
 </html>
