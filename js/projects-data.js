@@ -175,6 +175,25 @@ const PROJECTS = [
     ],
   },
   {
+    id: "portfolio",
+    title: "Personal Portfolio",
+    period: "2018 - Present",
+    company: null,
+    link: "https://github.com/evgomes/evgomes.github.io",
+    sector: "Open Source",
+    tags: ["HTML5", "CSS3", "JavaScript", "GitHub Pages"],
+    thumb: { src: "assets/img/projects/portfolio/index.png", alt: "Personal portfolio homepage" },
+    summary:
+      "This very website: my personal portfolio, hand-built with plain HTML, CSS, and JavaScript (no framework) and deployed on GitHub Pages. Open source on GitHub.",
+    images: [
+      { src: "assets/img/projects/portfolio/index.png", alt: "Portfolio homepage", caption: "Hero with an animated particle and constellation background, quick facts, and impact metrics." },
+    ],
+    body: [
+      "<p>This is the website you are looking at now: my personal portfolio, where I present my experience, projects, writing, and skills. It is <a href=\"https://github.com/evgomes/evgomes.github.io\" target=\"_blank\" rel=\"noopener\">open source on GitHub</a> and published with <strong>GitHub Pages</strong>.</p>",
+      "<p>It is built with plain <strong>HTML, CSS, and JavaScript</strong> and no framework, keeping it fast and dependency-free. It features a dark, theme-aware design, an animated particle and constellation background, a data-driven project catalog, accessible markup, and a fully responsive layout.</p>",
+    ],
+  },
+  {
     id: "antennas-api",
     title: "Antennas API",
     period: "September 2024 - November 2024",
