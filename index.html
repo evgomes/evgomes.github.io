@@ -6,7 +6,8 @@
     <title>Evandro Gomes - Software Architect &amp; Applied AI Consultant</title>
     <meta name="description" content="Evandro Gayer Gomes is a software architect and applied AI specialist with 15+ years in tech. Founder of Fronteira Labs, he helps companies turn complex processes into reliable systems, automation workflows, and practical AI solutions." />
     <link rel="canonical" href="https://evgomes.github.io/" />
-    <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico" />
+    <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg" />
+    <link rel="alternate icon" type="image/x-icon" href="assets/img/favicon.ico" />
 
     <!-- Open Graph -->
     <meta property="og:type" content="website" />
@@ -22,7 +23,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet" />
     <!-- Icons (CSS build - no JS injection) -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link href="css/style.css?v=2" rel="stylesheet" />
+    <link href="css/style.css?v=5" rel="stylesheet" />
 
     <!-- Structured data -->
     <script type="application/ld+json">
@@ -58,6 +59,8 @@
   </head>
 
   <body>
+    <!-- Ambient page background: static grid + a soft glow that follows the cursor -->
+    <div id="bg-fx" aria-hidden="true"><div id="bg-glow"></div></div>
     <a class="skip-link" href="#main">Skip to content</a>
 
     <!-- Navigation -->
@@ -89,7 +92,7 @@
       <section class="hero" id="top">
         <div class="container">
           <div>
-            <p class="badge-available"><span class="dot" aria-hidden="true"></span> Available for consulting &amp; new projects</p>
+            <p class="badge-available"><span class="dot" aria-hidden="true"></span> Open to new projects</p>
             <h1>Evandro Gayer Gomes</h1>
             <p class="role">Software Architect &amp; AI Specialist</p>
             <p class="pitch">
@@ -343,92 +346,92 @@
           <div class="skills-grid">
             <div class="skill-card reveal">
               <h3><i class="fa-solid fa-server" aria-hidden="true"></i> Backend &amp; APIs</h3>
-              <div class="tag-row">
-                <span class="tag">C#</span>
-                <span class="tag">.NET</span>
-                <span class="tag">ASP.NET Core</span>
-                <span class="tag">Web API</span>
-                <span class="tag">Minimal API</span>
-                <span class="tag">Blazor</span>
-                <span class="tag">Razor Pages</span>
-                <span class="tag">Entity Framework Core</span>
-                <span class="tag">Hangfire</span>
-                <span class="tag">Node.js</span>
-                <span class="tag">Express.js</span>
-                <span class="tag">Microservices</span>
-                <span class="tag">SignalR</span>
+              <div class="skill-list">
+                <span class="skill"><i class="fa-solid fa-hashtag" aria-hidden="true"></i>C#</span>
+                <span class="skill"><i class="fa-brands fa-microsoft" aria-hidden="true"></i>.NET</span>
+                <span class="skill"><i class="fa-solid fa-network-wired" aria-hidden="true"></i>ASP.NET Core</span>
+                <span class="skill"><i class="fa-solid fa-plug" aria-hidden="true"></i>Web API</span>
+                <span class="skill"><i class="fa-solid fa-feather-pointed" aria-hidden="true"></i>Minimal API</span>
+                <span class="skill"><i class="fa-solid fa-bolt" aria-hidden="true"></i>Blazor</span>
+                <span class="skill"><i class="fa-solid fa-file-code" aria-hidden="true"></i>Razor Pages</span>
+                <span class="skill"><i class="fa-solid fa-table" aria-hidden="true"></i>Entity Framework Core</span>
+                <span class="skill"><i class="fa-solid fa-fire" aria-hidden="true"></i>Hangfire</span>
+                <span class="skill"><i class="fa-brands fa-node-js" aria-hidden="true"></i>Node.js</span>
+                <span class="skill"><i class="fa-solid fa-route" aria-hidden="true"></i>Express.js</span>
+                <span class="skill"><i class="fa-solid fa-cubes" aria-hidden="true"></i>Microservices</span>
+                <span class="skill"><i class="fa-solid fa-tower-broadcast" aria-hidden="true"></i>SignalR</span>
               </div>
             </div>
             <div class="skill-card reveal">
               <h3><i class="fa-solid fa-robot" aria-hidden="true"></i> AI &amp; Automation</h3>
-              <div class="tag-row">
-                <span class="tag">Python</span>
-                <span class="tag">Generative AI</span>
-                <span class="tag">Computer Vision</span>
-                <span class="tag">AI Agents</span>
-                <span class="tag">LLM Integrations</span>
-                <span class="tag">n8n</span>
-                <span class="tag">Ollama</span>
-                <span class="tag">RAG</span>
-                <span class="tag">Model Context Protocol</span>
-                <span class="tag">Workflow Automation</span>
-                <span class="tag">Skills Development</span>
-                <span class="tag">AI-powered Sofware Engineering</span>
+              <div class="skill-list">
+                <span class="skill"><i class="fa-brands fa-python" aria-hidden="true"></i>Python</span>
+                <span class="skill"><i class="fa-solid fa-wand-magic-sparkles" aria-hidden="true"></i>Generative AI</span>
+                <span class="skill"><i class="fa-solid fa-eye" aria-hidden="true"></i>Computer Vision</span>
+                <span class="skill"><i class="fa-solid fa-robot" aria-hidden="true"></i>AI Agents</span>
+                <span class="skill"><i class="fa-solid fa-brain" aria-hidden="true"></i>LLM Integrations</span>
+                <span class="skill"><i class="fa-solid fa-diagram-project" aria-hidden="true"></i>n8n</span>
+                <span class="skill"><i class="fa-solid fa-microchip" aria-hidden="true"></i>Ollama</span>
+                <span class="skill"><i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>RAG</span>
+                <span class="skill"><i class="fa-solid fa-plug-circle-bolt" aria-hidden="true"></i>Model Context Protocol</span>
+                <span class="skill"><i class="fa-solid fa-gears" aria-hidden="true"></i>Workflow Automation</span>
+                <span class="skill"><i class="fa-solid fa-screwdriver-wrench" aria-hidden="true"></i>Skills Development</span>
+                <span class="skill"><i class="fa-solid fa-code" aria-hidden="true"></i>AI-powered Software Engineering</span>
               </div>
             </div>
             <div class="skill-card reveal">
               <h3><i class="fa-solid fa-laptop-code" aria-hidden="true"></i> Frontend</h3>
-              <div class="tag-row">
-                <span class="tag">JavaScript</span>
-                <span class="tag">TypeScript</span>
-                <span class="tag">Angular</span>
-                <span class="tag">React.js</span>
-                <span class="tag">Redux</span>
-                <span class="tag">HTML5</span>
-                <span class="tag">CSS3</span>
-                <span class="tag">SASS</span>
-                <span class="tag">Bootstrap</span>
-                <span class="tag">Accessibility</span>
+              <div class="skill-list">
+                <span class="skill"><i class="fa-brands fa-js" aria-hidden="true"></i>JavaScript</span>
+                <span class="skill"><i class="fa-solid fa-code" aria-hidden="true"></i>TypeScript</span>
+                <span class="skill"><i class="fa-brands fa-angular" aria-hidden="true"></i>Angular</span>
+                <span class="skill"><i class="fa-brands fa-react" aria-hidden="true"></i>React.js</span>
+                <span class="skill"><i class="fa-solid fa-layer-group" aria-hidden="true"></i>Redux</span>
+                <span class="skill"><i class="fa-brands fa-html5" aria-hidden="true"></i>HTML5</span>
+                <span class="skill"><i class="fa-brands fa-css3-alt" aria-hidden="true"></i>CSS3</span>
+                <span class="skill"><i class="fa-brands fa-sass" aria-hidden="true"></i>SASS</span>
+                <span class="skill"><i class="fa-brands fa-bootstrap" aria-hidden="true"></i>Bootstrap</span>
+                <span class="skill"><i class="fa-solid fa-universal-access" aria-hidden="true"></i>Accessibility</span>
               </div>
             </div>
             <div class="skill-card reveal">
               <h3><i class="fa-solid fa-database" aria-hidden="true"></i> Data &amp; Messaging</h3>
-              <div class="tag-row">
-                <span class="tag">SQL Server</span>
-                <span class="tag">PostgreSQL</span>
-                <span class="tag">MySQL</span>
-                <span class="tag">MongoDB</span>
-                <span class="tag">Redis</span>
-                <span class="tag">Apache Lucene</span>
-                <span class="tag">RabbitMQ</span>
-                <span class="tag">SQLite</span>
+              <div class="skill-list">
+                <span class="skill"><i class="fa-solid fa-database" aria-hidden="true"></i>SQL Server</span>
+                <span class="skill"><i class="fa-solid fa-database" aria-hidden="true"></i>PostgreSQL</span>
+                <span class="skill"><i class="fa-solid fa-database" aria-hidden="true"></i>MySQL</span>
+                <span class="skill"><i class="fa-solid fa-leaf" aria-hidden="true"></i>MongoDB</span>
+                <span class="skill"><i class="fa-solid fa-bolt" aria-hidden="true"></i>Redis</span>
+                <span class="skill"><i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>Apache Lucene</span>
+                <span class="skill"><i class="fa-solid fa-envelope-open-text" aria-hidden="true"></i>RabbitMQ</span>
+                <span class="skill"><i class="fa-solid fa-database" aria-hidden="true"></i>SQLite</span>
               </div>
             </div>
             <div class="skill-card reveal">
               <h3><i class="fa-solid fa-gears" aria-hidden="true"></i> DevOps &amp; Infrastructure</h3>
-              <div class="tag-row">
-                <span class="tag">Docker</span>
-                <span class="tag">Portainer</span>
-                <span class="tag">Github Actions</span>
-                <span class="tag">CI/CD</span>
-                <span class="tag">Jenkins</span>
-                <span class="tag">GitLab</span>
-                <span class="tag">HAProxy</span>
-                <span class="tag">Cloudflare</span>
-                <span class="tag">IIS</span>
-                <span class="tag">Grafana</span>
-                <span class="tag">Keycloak</span>
-                <span class="tag">Git</span>
-                <span class="tag">Google Analytics</span>
-                <span class="tag">Infisical (Vaulting)</span>
+              <div class="skill-list">
+                <span class="skill"><i class="fa-brands fa-docker" aria-hidden="true"></i>Docker</span>
+                <span class="skill"><i class="fa-solid fa-box-open" aria-hidden="true"></i>Portainer</span>
+                <span class="skill"><i class="fa-brands fa-github" aria-hidden="true"></i>Github Actions</span>
+                <span class="skill"><i class="fa-solid fa-infinity" aria-hidden="true"></i>CI/CD</span>
+                <span class="skill"><i class="fa-solid fa-user-gear" aria-hidden="true"></i>Jenkins</span>
+                <span class="skill"><i class="fa-brands fa-gitlab" aria-hidden="true"></i>GitLab</span>
+                <span class="skill"><i class="fa-solid fa-scale-balanced" aria-hidden="true"></i>HAProxy</span>
+                <span class="skill"><i class="fa-brands fa-cloudflare" aria-hidden="true"></i>Cloudflare</span>
+                <span class="skill"><i class="fa-brands fa-windows" aria-hidden="true"></i>IIS</span>
+                <span class="skill"><i class="fa-solid fa-chart-line" aria-hidden="true"></i>Grafana</span>
+                <span class="skill"><i class="fa-solid fa-key" aria-hidden="true"></i>Keycloak</span>
+                <span class="skill"><i class="fa-brands fa-git-alt" aria-hidden="true"></i>Git</span>
+                <span class="skill"><i class="fa-brands fa-google" aria-hidden="true"></i>Google Analytics</span>
+                <span class="skill"><i class="fa-solid fa-lock" aria-hidden="true"></i>Infisical (Vaulting)</span>
               </div>
             </div>
             <div class="skill-card reveal">
               <h3><i class="fa-solid fa-language" aria-hidden="true"></i> Languages</h3>
-              <div class="tag-row">
-                <span class="tag">Portuguese (native)</span>
-                <span class="tag">English (fluent)</span>
-                <span class="tag">Spanish (basic)</span>
+              <div class="skill-list">
+                <span class="skill"><i class="fa-solid fa-comment-dots" aria-hidden="true"></i>Portuguese (native)</span>
+                <span class="skill"><i class="fa-solid fa-comment-dots" aria-hidden="true"></i>English (fluent)</span>
+                <span class="skill"><i class="fa-solid fa-comment-dots" aria-hidden="true"></i>Spanish (basic)</span>
               </div>
             </div>
           </div>
@@ -682,6 +685,6 @@
     </footer>
 
     <script src="js/projects-data.js?v=2"></script>
-    <script src="js/main.js?v=2"></script>
+    <script src="js/main.js?v=3"></script>
   </body>
 </html>

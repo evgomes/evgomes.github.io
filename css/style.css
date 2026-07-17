@@ -21,6 +21,10 @@
   --glow: rgba(245, 158, 11, 0.07);
   --shadow: 0 12px 32px rgba(0, 0, 0, 0.35);
 
+  /* Ambient background effect */
+  --grid-line: rgba(148, 163, 184, 0.06);
+  --bg-glow: rgba(245, 158, 11, 0.06);
+
   --font-sans: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
   --font-mono: "JetBrains Mono", ui-monospace, "Cascadia Code", Consolas, monospace;
 
@@ -49,6 +53,9 @@
     --glow: rgba(180, 83, 9, 0.05);
     --shadow: 0 12px 32px rgba(15, 23, 42, 0.08);
 
+    --grid-line: rgba(15, 23, 42, 0.05);
+    --bg-glow: rgba(180, 83, 9, 0.05);
+
     color-scheme: light;
   }
 }
@@ -63,6 +70,7 @@
 html {
   scroll-behavior: smooth;
   scroll-padding-top: 84px;
+  background: var(--bg);
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -79,12 +87,45 @@ html {
 
 body {
   margin: 0;
-  background: var(--bg);
+  background: transparent; /* the fixed #bg-fx layer shows through */
   color: var(--text);
   font-family: var(--font-sans);
   font-size: 1rem;
   line-height: 1.65;
   -webkit-font-smoothing: antialiased;
+}
+
+/* ---------------------- Ambient background layer ------------------------- */
+#bg-fx {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  overflow: hidden;
+  background-image: linear-gradient(var(--grid-line) 1px, transparent 1px),
+    linear-gradient(90deg, var(--grid-line) 1px, transparent 1px);
+  background-size: 46px 46px;
+}
+
+#bg-glow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 38vmax;
+  height: 38vmax;
+  margin: -19vmax; /* center the circle on the layer origin (0,0) */
+  border-radius: 50%;
+  background: radial-gradient(circle, var(--bg-glow) 0%, transparent 60%);
+  /* moved to the cursor via CSS vars set in main.js */
+  transform: translate3d(var(--gx, 50vw), var(--gy, 22vh), 0);
+  transition: transform 0.3s ease-out;
+  will-change: transform;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  #bg-glow {
+    transition: none;
+  }
 }
 
 img {
@@ -145,8 +186,10 @@ section {
   padding: 5rem 0;
 }
 
+/* Even sections (About, Projects, Skills, Contact) get a solid background so the
+   grid stays hidden there; odd sections stay transparent and show the grid. */
 section:nth-of-type(even) {
-  background: var(--bg-alt);
+  background: var(--bg);
 }
 
 .section-heading {
@@ -408,18 +451,6 @@ section:nth-of-type(even) {
   padding: 10rem 0 6rem;
   position: relative;
   overflow: hidden;
-}
-
-.hero::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background-image: linear-gradient(var(--border) 1px, transparent 1px),
-    linear-gradient(90deg, var(--border) 1px, transparent 1px);
-  background-size: 44px 44px;
-  mask-image: radial-gradient(ellipse 90% 70% at 50% 0%, black 20%, transparent 75%);
-  opacity: 0.5;
-  pointer-events: none;
 }
 
 .hero::after {
@@ -1200,6 +1231,38 @@ section:nth-of-type(even) {
   color: var(--accent);
   width: 1.4rem;
   text-align: center;
+}
+
+.skill-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.skill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--text);
+  padding: 0.4rem 0.75rem;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border);
+  background: var(--surface-2);
+  transition: border-color 0.15s ease, transform 0.15s ease, color 0.15s ease;
+}
+
+.skill i {
+  color: var(--accent);
+  font-size: 0.95em;
+  width: 1.05em;
+  text-align: center;
+}
+
+.skill:hover {
+  border-color: var(--accent-border);
+  transform: translateY(-2px);
 }
 
 /* ------------------------------ Credentials ------------------------------- */

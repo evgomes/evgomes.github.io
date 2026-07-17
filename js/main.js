@@ -241,6 +241,35 @@
     });
   });
 
+  /* ---------------------- Cursor-following background glow ------------------ */
+  // Moves a soft glow toward the pointer. Cheap: one transform update per frame,
+  // GPU-composited, and skipped entirely under reduced-motion or on touch.
+  const glow = document.getElementById("bg-glow");
+  if (glow && !reduceMotion && window.matchMedia("(hover: hover)").matches) {
+    let targetX = 0;
+    let targetY = 0;
+    let ticking = false;
+
+    const apply = () => {
+      glow.style.setProperty("--gx", `${targetX}px`);
+      glow.style.setProperty("--gy", `${targetY}px`);
+      ticking = false;
+    };
+
+    window.addEventListener(
+      "pointermove",
+      (e) => {
+        targetX = e.clientX;
+        targetY = e.clientY;
+        if (!ticking) {
+          ticking = true;
+          requestAnimationFrame(apply);
+        }
+      },
+      { passive: true }
+    );
+  }
+
   /* --------------------------------- Footer -------------------------------- */
   const year = document.getElementById("footer-year");
   if (year) year.textContent = new Date().getFullYear();
