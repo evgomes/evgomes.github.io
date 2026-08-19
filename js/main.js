@@ -160,14 +160,30 @@
   const dialogTitle = document.getElementById("project-dialog-title");
   const dialogMeta = document.getElementById("project-dialog-meta");
   const dialogBody = document.getElementById("project-dialog-body");
+  const carousel = document.querySelector(".carousel");
   const carouselTrack = document.getElementById("carousel-track");
   const carouselCounter = document.getElementById("carousel-counter");
   const carouselCaption = document.getElementById("carousel-caption");
   const carouselPrev = document.getElementById("carousel-prev");
   const carouselNext = document.getElementById("carousel-next");
+  const carouselFullscreen = document.getElementById("carousel-fullscreen");
   let slideIndex = 0;
   let slideCount = 0;
   let currentImages = [];
+
+  const fullscreenSupported = Boolean(carousel.requestFullscreen && document.exitFullscreen);
+  carouselFullscreen.hidden = !fullscreenSupported;
+
+  function syncFullscreenButton() {
+    const isFullscreen = document.fullscreenElement === carousel;
+    const label = isFullscreen ? "Exit fullscreen" : "View screenshot in fullscreen";
+    carouselFullscreen.setAttribute("aria-label", label);
+    carouselFullscreen.title = label;
+    carouselFullscreen.querySelector("span").textContent = isFullscreen ? "Exit fullscreen" : "Fullscreen";
+    carouselFullscreen.querySelector("i").className = isFullscreen
+      ? "fa-solid fa-compress"
+      : "fa-solid fa-expand";
+  }
 
   function showSlide(i) {
     slideIndex = (i + slideCount) % slideCount;
@@ -217,6 +233,20 @@
 
   carouselPrev.addEventListener("click", () => showSlide(slideIndex - 1));
   carouselNext.addEventListener("click", () => showSlide(slideIndex + 1));
+  if (fullscreenSupported) {
+    carouselFullscreen.addEventListener("click", async () => {
+      try {
+        if (document.fullscreenElement === carousel) {
+          await document.exitFullscreen();
+        } else {
+          await carousel.requestFullscreen();
+        }
+      } catch {
+        carouselFullscreen.title = "Fullscreen could not be opened in this browser";
+      }
+    });
+    document.addEventListener("fullscreenchange", syncFullscreenButton);
+  }
   dialog.addEventListener("keydown", (e) => {
     if (slideCount < 2) return;
     if (e.key === "ArrowLeft") showSlide(slideIndex - 1);
@@ -226,10 +256,7 @@
   document.getElementById("project-dialog-close").addEventListener("click", () => dialog.close());
   // Close when clicking the backdrop (outside the dialog panel).
   dialog.addEventListener("click", (e) => {
-    const rect = dialog.getBoundingClientRect();
-    const inside =
-      e.clientX >= rect.left && e.clientX <= rect.right && e.clientY >= rect.top && e.clientY <= rect.bottom;
-    if (!inside) dialog.close();
+    if (e.target === dialog) dialog.close();
   });
 
   /* ------------------------ Generic "show more" toggles -------------------- */

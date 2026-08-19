@@ -11,6 +11,54 @@
  * body: full description paragraphs (HTML allowed), shown in the dialog.
  */
 const PROJECTS = [
+  // ---------------------------------------------------------------------------
+  // Featured current BusyKeys products.
+  // ---------------------------------------------------------------------------
+  {
+    id: "dottie-keys",
+    title: "Dottie Keys",
+    period: "2026 - Present",
+    company: { name: "BusyKeys", url: "https://busykeys.com/" },
+    link: null,
+    sector: "Real Estate",
+    tags: [".NET / C#", "React.js", "PostgreSQL", "AI Agents", "Integrations"],
+    thumb: { src: "assets/img/projects/dottie-keys/dashboard.png", alt: "Dottie Keys property-management dashboard" },
+    summary:
+      "Agentic property-management platform where Dottie handles workflows such as lease renewals, lead inspection certificates, and bill processing through vendor and internal-tool integrations.",
+    images: [
+      { src: "assets/img/projects/dottie-keys/dashboard.png", alt: "Dottie Keys property-management dashboard", caption: "Property-management dashboard summarizing rent collection, occupancy, approvals, schedules, and work completed by Dottie." },
+      { src: "assets/img/projects/dottie-keys/cases-and-chat-area.png", alt: "Dottie Keys cases workspace with the Ask Dottie agent panel", caption: "Cases workspace with operational tasks and the Ask Dottie agent panel open alongside the queue." },
+      { src: "assets/img/projects/dottie-keys/landing-page.png", alt: "Dottie Keys early-access landing page", caption: "Early-access landing page introducing Dottie as an AI property-management assistant." },
+    ],
+    body: [
+      "<p>Dottie Keys is an agentic property-management platform that gives teams access to Dottie, an AI agent that carries out workflows such as lease renewals, lead inspection certificates, bill processing, and other repeatable operations. Rather than stopping at chat, Dottie works within structured cases, surfaces decisions for human review, and helps teams move work to completion.</p>",
+      "<p>The platform integrates with external vendors such as <strong>Buildium</strong> and <strong>TextMagic</strong>, as well as BusyKeys' internal agent harness. It is built with <strong>.NET</strong>, <strong>React.js</strong>, and <strong>PostgreSQL</strong>. As a software architect and forward-deployed engineer, I design and integrate capabilities across the platform and adapt Dottie to each customer's internal processes.</p>",
+      "<p>Dottie Keys is currently in development and closed beta as the team prepares it for a broader market launch.</p>",
+    ],
+  },
+  {
+    id: "presto-studio",
+    title: "Presto Studio",
+    period: "2026 - Present",
+    company: { name: "BusyKeys", url: "https://busykeys.com/" },
+    link: null,
+    sector: "AI Innovation",
+    tags: ["Rust", "React.js", "PostgreSQL", "Kubernetes", "AI Agents"],
+    thumb: { src: "assets/img/projects/presto-studio/dashboard.png", alt: "Presto Studio website and infrastructure dashboard" },
+    summary:
+      "AI-assisted website infrastructure platform that helps agencies and independent developers configure servers, manage Git-backed sites, and deploy through Vera without infrastructure overhead.",
+    images: [
+      { src: "assets/img/projects/presto-studio/dashboard.png", alt: "Presto Studio website and infrastructure dashboard", caption: "Workspace dashboard summarizing connected sites, servers, domains, setup readiness, and Vera conversations." },
+      { src: "assets/img/projects/presto-studio/create-website.png", alt: "Presto Studio create-site workflow", caption: "Guided site-creation flow connecting a domain, server, and GitHub repository before provisioning." },
+      { src: "assets/img/projects/presto-studio/servers-area.png", alt: "Presto Studio server-management area", caption: "Server management showing a successfully provisioned VPS, its default domain, and deployment readiness." },
+      { src: "assets/img/projects/presto-studio/vera-agent.png", alt: "Vera AI agent workspace in Presto Studio", caption: "Vera agent workspace answering a site-inventory request through the platform's internal tooling." },
+    ],
+    body: [
+      "<p>Presto Studio helps agencies and independent developers host, develop, and deploy websites without taking on the usual infrastructure complexity. Users connect their VPS servers, and the platform configures the tooling and access that Vera, its AI agent, needs to manage the environment.</p>",
+      "<p>From there, users can create and manage Git-backed websites, ask Vera to make code changes, and deploy new versions through guided workflows that follow sound software-development practices—even when they are not developers or infrastructure specialists. The platform is built with <strong>Rust</strong>, <strong>React.js</strong>, and <strong>PostgreSQL</strong>, and is deployed on <strong>Kubernetes</strong>.</p>",
+      "<p>As a software architect, I help the team design and implement new capabilities, develop and test product ideas, and onboard users into the closed beta. Presto Studio is being prepared for a broader market launch.</p>",
+    ],
+  },
   {
     id: "fronteira-labs",
     title: "Fronteira Labs",
@@ -33,7 +81,7 @@ const PROJECTS = [
     ],
   },
   // ---------------------------------------------------------------------------
-  // BusyKeys (April 2025 - Present). Selected work from the AI-native product suite.
+  // Additional BusyKeys work from the AI-native product suite.
   // ---------------------------------------------------------------------------
   {
     id: "zonifymo",
