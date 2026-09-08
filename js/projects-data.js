@@ -242,26 +242,6 @@ const PROJECTS = [
     ],
   },
   {
-    id: "cadastramento-escolar",
-    title: "Cadastramento Escolar",
-    period: "March 2024 - April 2025",
-    company: { name: "Instituto das Cidades Inteligentes", url: "https://www.ici.curitiba.org.br/" },
-    link: "https://cadastramento-escolar.curitiba.pr.gov.br/",
-    sector: "Education",
-    tags: [".NET", "C#", "Queue-it", "Performance"],
-    thumb: { src: "assets/img/projects/cadastramento-escolar/main-page.png", alt: "Cadastramento Escolar homepage" },
-    summary:
-      "Curitiba's online school-registration service for families seeking places in municipal preschool and first-grade classes. I helped evolve its architecture, performance, reliability, and delivery of new enrollment phases.",
-    images: [
-      { src: "assets/img/projects/cadastramento-escolar/main-page.png", alt: "Cadastramento Escolar homepage", caption: "Cadastramento Escolar entry page explaining the three registration phases and providing access to the municipal school-place service." },
-    ],
-    body: [
-      "<p><a href=\"https://cadastramento-escolar.curitiba.pr.gov.br/\" target=\"_blank\" rel=\"noopener\">Cadastramento Escolar</a> is Curitiba's online school-registration service for families registering children and students who will enter municipal preschool or the first year of elementary school. The service guides families through multiple enrollment phases and provides access to the city's school-place application process.</p>",
-      "<p>While working as a software architect at the <strong>Instituto das Cidades Inteligentes (ICI)</strong>, I worked closely with the development team to implement new phases and features, and helped deliver multiple architectural and performance optimizations across the website.</p>",
-      "<p>I also implemented <strong>Queue-it</strong> to manage peaks in concurrent access and protect the service from overload during high-demand registration periods. The application is built with <strong>.NET</strong> and <strong>C#</strong>.</p>",
-    ],
-  },
-  {
     id: "antennas-api",
     title: "Antennas API",
     period: "September 2024 - November 2024",
